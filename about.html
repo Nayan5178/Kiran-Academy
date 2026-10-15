@@ -1,0 +1,2524 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Kiran Midbrain Academy</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        /* =====================================================
+           ROOT COLORS
+        ===================================================== */
+
+        :root {
+
+            --bg: #fffaf7;
+
+            --white: #ffffff;
+
+            --surface: #ffffff;
+
+            --surface-2: #fff4ec;
+
+            --surface-3: #f6f2ff;
+
+            --border: rgba(118, 87, 232, 0.18);
+
+            --line: rgba(40, 35, 70, 0.09);
+
+            --text: #29233d;
+
+            --text-dark: #201a32;
+
+            --text-dim: #625d76;
+
+            --muted: #777287;
+
+            --violet: #7657e8;
+
+            --violet-light: #9b84ff;
+
+            --pink: #f45b9a;
+
+            --pink-light: #ff83b5;
+
+            --amber: #f5a623;
+
+            --amber-light: #ffc857;
+
+            --logic: #5574e8;
+
+            --logic-soft: rgba(85, 116, 232, .10);
+
+            --creative: #f39b38;
+
+            --creative-soft: rgba(243, 155, 56, .12);
+
+            --mint: #18b890;
+
+            --blue: #4e9bea;
+
+        }
+
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            margin: 0;
+
+            background:
+
+                radial-gradient(circle at 5% 10%,
+                    rgba(118, 87, 232, .07),
+                    transparent 25%),
+
+                radial-gradient(circle at 95% 35%,
+                    rgba(244, 91, 154, .06),
+                    transparent 25%),
+
+                linear-gradient(180deg,
+                    #fffaf7 0%,
+                    #ffffff 50%,
+                    #fff8f3 100%);
+
+            color: var(--text);
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family:
+                'Fraunces',
+                serif;
+
+            font-weight: 600;
+
+            line-height: 1.12;
+
+            margin: 0 0 .5em;
+        }
+
+        section {
+            padding: 110px 0;
+
+            position: relative;
+        }
+
+
+        /* =====================================================
+           EYEBROW
+        ===================================================== */
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--violet);
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 28px;
+
+            height: 3px;
+
+            border-radius: 20px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+        }
+
+
+        /* =====================================================
+           GRADIENT TEXT
+        ===================================================== */
+
+        .split {
+
+            display: inline-block;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--amber));
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            color: transparent;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            padding: 8px 0;
+
+            min-height: 90px;
+
+            background:
+                rgba(255, 255, 255, .95) !important;
+
+            backdrop-filter:
+                blur(16px);
+
+            -webkit-backdrop-filter:
+                blur(16px);
+
+            border-bottom:
+                1px solid rgba(118, 87, 232, .13);
+
+            box-shadow:
+                0 5px 25px rgba(60, 40, 90, .06);
+
+            z-index: 9999;
+        }
+
+        .navbar-brand {
+
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+        }
+
+        .logo-img {
+
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 5px 12px rgba(118, 87, 232, .18));
+        }
+
+        .navbar-brand h3 {
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color:
+                var(--text-dark) !important;
+        }
+
+        .navbar-brand small {
+
+            display: block;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 16px;
+
+            color:
+                var(--violet) !important;
+
+            letter-spacing: .5px;
+        }
+
+        .navbar-nav {
+            gap: 5px;
+        }
+
+        .navbar-nav .nav-link {
+
+            position: relative;
+
+            color:
+                var(--text-dim) !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding:
+                10px 13px !important;
+
+            transition:
+                color .3s ease,
+                transform .3s ease;
+        }
+
+        .navbar-nav .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 2px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateX(-50%);
+
+            transition:
+                width .35s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+
+            color:
+                var(--violet) !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+
+            transform:
+                translateY(-1px);
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+
+            width: 70%;
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .btn-glow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            padding:
+                12px 25px;
+
+            font-weight: 700;
+
+            color: #fff !important;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+
+                0 8px 22px rgba(118, 87, 232, .25);
+
+            transition:
+                .3s ease;
+        }
+
+        .btn-glow:hover {
+
+            transform:
+                translateY(-3px) scale(1.03);
+
+            color: #fff !important;
+
+            box-shadow:
+
+                0 14px 32px rgba(244, 91, 154, .30);
+        }
+
+        .btn-primary {
+
+            border: none;
+
+            color: #fff !important;
+
+            font-weight: 700;
+
+            padding:
+                13px 28px;
+
+            border-radius: 50px;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            box-shadow:
+
+                0 10px 28px rgba(118, 87, 232, .22);
+
+            transition:
+                .3s ease;
+        }
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            color: #fff !important;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--pink),
+                    var(--violet));
+
+            box-shadow:
+
+                0 15px 35px rgba(244, 91, 154, .28);
+        }
+
+
+        /* =====================================================
+           NAVBAR TOGGLER
+        ===================================================== */
+
+        .navbar-toggler {
+
+            border:
+                1px solid rgba(118, 87, 232, .20);
+
+            padding:
+                8px 10px;
+
+            background:
+                rgba(118, 87, 232, .06);
+        }
+
+        .navbar-toggler:focus {
+
+            box-shadow:
+                0 0 0 3px rgba(118, 87, 232, .10);
+        }
+
+        .navbar-toggler-icon {
+
+            background-image:
+                url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2840,35,60,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+
+        /* =====================================================
+           FOUNDATION
+        ===================================================== */
+
+        .foundation-section {
+
+            background:
+
+                radial-gradient(circle at 8% 30%,
+                    rgba(85, 116, 232, .10),
+                    transparent 32%),
+
+                radial-gradient(circle at 92% 75%,
+                    rgba(243, 155, 56, .12),
+                    transparent 34%);
+
+            overflow: hidden;
+        }
+
+        .foundation-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 320px;
+
+            height: 320px;
+
+            top: -160px;
+
+            right: -100px;
+
+            background:
+                rgba(118, 87, 232, .10);
+
+            filter:
+                blur(80px);
+
+            border-radius: 50%;
+        }
+
+        .foundation-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+
+            height: 220px;
+
+            bottom: -100px;
+
+            left: -80px;
+
+            background:
+                rgba(244, 91, 154, .08);
+
+            filter:
+                blur(70px);
+
+            border-radius: 50%;
+        }
+
+        .foundation-wrapper {
+
+            display: grid;
+
+            grid-template-columns:
+                .9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        /* =====================================================
+           FOUNDER IMAGE
+        ===================================================== */
+
+        .foundation-image-box {
+
+            position: relative;
+
+            padding: 0;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(135deg,
+                    rgba(118, 87, 232, .15),
+                    rgba(244, 91, 154, .12),
+                    rgba(243, 155, 56, .12));
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 60px rgba(60, 40, 90, .12);
+        }
+
+        .foundation-image-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 14px;
+
+            border-radius: 22px;
+
+            border:
+                2px solid rgba(255, 255, 255, .70);
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+        .foundation-image {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            border-radius: 28px;
+
+            transition:
+                transform .4s ease,
+                filter .4s ease;
+        }
+
+        .foundation-image-box:hover .foundation-image {
+
+            transform:
+                scale(1.03);
+
+            filter:
+                brightness(1.04);
+        }
+
+
+        /* =====================================================
+           FOUNDER BADGE
+        ===================================================== */
+
+        .foundation-badge {
+
+            position: absolute;
+
+            bottom: 28px;
+
+            left: 28px;
+
+            padding:
+                12px 18px;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255, 255, 255, .95);
+
+            border:
+                1px solid rgba(118, 87, 232, .14);
+
+            backdrop-filter:
+                blur(12px);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            z-index: 4;
+
+            box-shadow:
+                0 10px 30px rgba(40, 30, 60, .15);
+        }
+
+        .foundation-badge i {
+
+            color:
+                var(--pink);
+
+            filter:
+                drop-shadow(0 0 7px rgba(244, 91, 154, .25));
+        }
+
+        .foundation-badge span {
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            color:
+                #302a46;
+        }
+
+
+        /* =====================================================
+           FOUNDATION COPY
+        ===================================================== */
+
+        .foundation-copy h3 {
+
+            font-size:
+                clamp(30px, 4vw, 44px);
+
+            margin-top: 18px;
+
+            color:
+                #28223d;
+        }
+
+        .foundation-copy h4 {
+
+            color:
+                var(--violet);
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 18px;
+        }
+
+        .foundation-copy p {
+
+            color:
+                #6f6b80;
+
+            font-size: 16px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .foundation-quote {
+
+            margin-top: 28px;
+
+            padding:
+                24px 26px;
+
+            border-left:
+                4px solid var(--creative);
+
+            background:
+
+                linear-gradient(90deg,
+                    rgba(243, 155, 56, .10),
+                    rgba(118, 87, 232, .04));
+
+            border-radius:
+                0 16px 16px 0;
+        }
+
+        .foundation-quote i {
+
+            color:
+                var(--creative);
+
+            font-size: 18px;
+
+            margin-right: 8px;
+        }
+
+        .foundation-quote p {
+
+            color:
+                #40394f;
+
+            font-family:
+                'Fraunces',
+                serif;
+
+            font-size: 18px;
+
+            line-height: 1.55;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           MISSION / VISION
+        ===================================================== */
+
+        .bg-panel {
+
+            background:
+
+                linear-gradient(180deg,
+                    #fff4ec 0%,
+                    #ffffff 100%);
+
+            border-top:
+                1px solid rgba(80, 60, 100, .07);
+
+            border-bottom:
+                1px solid rgba(80, 60, 100, .07);
+        }
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 56px;
+        }
+
+        .section-heading h2 {
+
+            font-size:
+                clamp(28px, 4vw, 40px);
+
+            color:
+                var(--text);
+        }
+
+        .mv-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 28px;
+        }
+
+        .mv-card {
+
+            padding:
+                44px 38px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid rgba(80, 60, 100, .10);
+
+            background:
+                rgba(255, 255, 255, .92);
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 35px rgba(50, 35, 80, .06);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .mv-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            border-radius: 50%;
+
+            filter:
+                blur(50px);
+
+            opacity: .10;
+
+            top: -100px;
+
+            right: -80px;
+        }
+
+        .mv-card.logic::before {
+            background:
+                var(--logic);
+        }
+
+        .mv-card.creative::before {
+            background:
+                var(--creative);
+        }
+
+        .mv-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(118, 87, 232, .25);
+
+            box-shadow:
+                0 20px 50px rgba(50, 35, 80, .12);
+        }
+
+        .mv-card .icon-badge {
+
+            width: 52px;
+
+            height: 52px;
+
+            border-radius: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 20px;
+
+            margin-bottom: 18px;
+        }
+
+        .mv-card.logic .icon-badge {
+
+            background:
+                var(--logic-soft);
+
+            color:
+                var(--logic);
+        }
+
+        .mv-card.creative .icon-badge {
+
+            background:
+                var(--creative-soft);
+
+            color:
+                var(--creative);
+        }
+
+        .mv-card h4 {
+
+            font-size: 22px;
+
+            color:
+                #2d2740;
+        }
+
+        .mv-card p {
+
+            color:
+                #6f6b80;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           FEATURES
+        ===================================================== */
+
+        .feat-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 1px;
+
+            background:
+                rgba(80, 60, 100, .10);
+
+            border:
+                1px solid rgba(80, 60, 100, .10);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 12px 35px rgba(50, 35, 80, .05);
+        }
+
+        .feat-card {
+
+            background:
+                #ffffff;
+
+            padding:
+                36px 26px;
+
+            transition:
+                .3s ease;
+
+            position: relative;
+        }
+
+        .feat-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            height: 3px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--amber));
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform .35s ease;
+        }
+
+        .feat-card:hover {
+
+            background:
+                #fff8f3;
+        }
+
+        .feat-card:hover::after {
+
+            transform:
+                scaleX(1);
+        }
+
+        .feat-card i {
+
+            font-size: 22px;
+
+            color:
+                var(--logic);
+
+            transition:
+                .3s;
+        }
+
+        .feat-card:nth-child(2n) i {
+            color:
+                var(--creative);
+        }
+
+        .feat-card:nth-child(3n) i {
+            color:
+                var(--pink);
+        }
+
+        .feat-card:nth-child(4n) i {
+            color:
+                var(--mint);
+        }
+
+        .feat-card:hover i {
+
+            transform:
+                scale(1.15) translateY(-2px);
+        }
+
+        .feat-card h5 {
+
+            font-size: 16.5px;
+
+            margin:
+                16px 0 8px;
+
+            color:
+                #302a42;
+        }
+
+        .feat-card p {
+
+            font-size: 14px;
+
+            color:
+                #777287;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           PROGRAMS
+        ===================================================== */
+
+        .prog-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+        .prog-card {
+
+            border-radius: 22px;
+
+            border:
+                1px solid rgba(80, 60, 100, .10);
+
+            padding:
+                38px 32px;
+
+            background:
+                #ffffff;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 35px rgba(50, 35, 80, .06);
+
+            transition:
+                .3s ease;
+        }
+
+        .prog-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+
+            height: 150px;
+
+            top: -90px;
+
+            right: -60px;
+
+            border-radius: 50%;
+
+            background:
+                var(--violet);
+
+            filter:
+                blur(60px);
+
+            opacity: .08;
+        }
+
+        .prog-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            height: 3px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--logic),
+                    var(--creative),
+                    var(--pink));
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                .35s;
+        }
+
+        .prog-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(118, 87, 232, .22);
+
+            box-shadow:
+                0 20px 45px rgba(50, 35, 80, .12);
+        }
+
+        .prog-card:hover::after {
+
+            transform:
+                scaleX(1);
+        }
+
+        .prog-card i {
+
+            font-size: 24px;
+
+            margin-bottom: 18px;
+
+            color:
+                var(--logic);
+        }
+
+        .prog-card:nth-child(2) i {
+
+            color:
+                var(--creative);
+        }
+
+        .prog-card:nth-child(3) i {
+
+            color:
+                var(--pink);
+        }
+
+        .prog-card h4 {
+
+            font-size: 21px;
+
+            color:
+                #302a42;
+        }
+
+        .prog-card p {
+
+            color:
+                #777287;
+
+            font-size: 15px;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-wrapper {
+
+            padding:
+                0 0 110px;
+        }
+
+        .cta-section {
+
+            margin:
+                0 24px;
+
+            border-radius: 32px;
+
+            background:
+
+                linear-gradient(120deg,
+                    #f0eaff,
+                    #fff0f5);
+
+            border:
+                1px solid rgba(118, 87, 232, .15);
+
+            padding:
+                70px 40px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px rgba(70, 50, 100, .10);
+        }
+
+        .cta-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(circle at 20% 30%,
+                    rgba(85, 116, 232, .12),
+                    transparent 45%),
+
+                radial-gradient(circle at 80% 70%,
+                    rgba(243, 155, 56, .13),
+                    transparent 45%);
+        }
+
+        .cta-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            top: -160px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(244, 91, 154, .10);
+
+            filter:
+                blur(70px);
+        }
+
+        .cta-section>* {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+
+            font-size:
+                clamp(28px, 4vw, 42px);
+
+            max-width: 650px;
+
+            margin:
+                0 auto 14px;
+
+            color:
+                #2d2740;
+        }
+
+        .cta-section p {
+
+            color:
+                #716c80;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding:
+                60px 0 20px;
+
+            color:
+                #6e697c;
+
+            background:
+                #f5f1f8;
+
+            border-top:
+                1px solid rgba(118, 87, 232, .15);
+        }
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .footer-brand img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 5px 10px rgba(118, 87, 232, .15));
+        }
+
+        .footer-brand h3 {
+
+            margin: 0;
+
+            color:
+                #2b2540;
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+        }
+
+        .footer-brand span {
+
+            color:
+                var(--violet);
+
+            font-weight: 700;
+
+            font-size: 13px;
+        }
+
+        .footer-description {
+
+            max-width: 440px;
+
+            margin-top: 20px;
+
+            color:
+                #6e697c;
+
+            line-height: 1.8;
+        }
+
+        footer h5 {
+
+            color:
+                #302a42;
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 20px;
+        }
+
+        footer .col-lg-3 a {
+
+            display: block;
+
+            color:
+                #6e697c;
+
+            margin-bottom: 11px;
+
+            transition:
+                .3s;
+        }
+
+        footer .col-lg-3 a:hover {
+
+            color:
+                var(--mint);
+
+            transform:
+                translateX(5px);
+        }
+
+        footer .col-lg-4 p {
+
+            color:
+                #6e697c;
+
+            margin-bottom: 9px;
+        }
+
+        footer .col-lg-4 p i {
+
+            width: 20px;
+
+            color:
+                var(--violet);
+        }
+
+        footer hr {
+
+            margin-top: 45px;
+
+            border-color:
+                rgba(50, 40, 70, .10);
+        }
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+
+            margin: 0;
+
+            color:
+                #8a8498;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           SOCIAL
+        ===================================================== */
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+        .social-icons a {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color:
+                #5f596e;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid rgba(118, 87, 232, .16);
+
+            transition:
+                .3s;
+        }
+
+        .social-icons a:hover {
+
+            color: #fff;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+
+                0 8px 20px rgba(118, 87, 232, .20);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+                min-height: 75px;
+            }
+
+            .logo-img {
+
+                width: 65px;
+
+                height: 65px;
+            }
+
+            .navbar-brand h3 {
+                font-size: 24px;
+            }
+
+            .navbar-brand small {
+                font-size: 12px;
+            }
+
+            .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px;
+
+                background:
+                    #ffffff;
+
+                border:
+                    1px solid rgba(118, 87, 232, .15);
+
+                border-radius: 16px;
+
+                box-shadow:
+                    0 20px 40px rgba(50, 35, 80, .12);
+            }
+
+            .navbar-nav {
+                gap: 2px;
+            }
+
+            .navbar-nav .nav-link {
+                padding:
+                    11px 14px !important;
+            }
+
+            .navbar .btn-glow {
+
+                display: inline-flex;
+
+                margin-top: 10px;
+            }
+
+            .foundation-wrapper {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 45px;
+            }
+
+            .foundation-image-box {
+
+                max-width: 600px;
+
+                width: 100%;
+
+                margin: auto;
+            }
+
+            .feat-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .prog-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media (max-width: 767px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-heading {
+                margin-bottom: 40px;
+            }
+
+            .mv-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .feat-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .mv-card {
+
+                padding:
+                    32px 26px;
+            }
+
+            .foundation-copy {
+                text-align: left;
+            }
+
+            .foundation-badge {
+
+                left: 20px;
+
+                bottom: 20px;
+
+                padding:
+                    10px 14px;
+            }
+
+            .foundation-quote {
+
+                padding:
+                    20px;
+            }
+
+            .cta-wrapper {
+                padding-bottom: 75px;
+            }
+
+            .cta-section {
+
+                margin:
+                    0 12px;
+
+                padding:
+                    50px 22px;
+
+                border-radius:
+                    24px;
+            }
+
+            footer {
+
+                padding:
+                    45px 0 20px;
+            }
+
+            .footer-description {
+                max-width: 100%;
+            }
+
+            .footer-bottom {
+
+                text-align:
+                    center;
+
+                justify-content:
+                    center;
+            }
+
+            .social-icons {
+
+                justify-content:
+                    center;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo-img {
+
+                width: 55px;
+
+                height: 55px;
+            }
+
+            .navbar-brand h3 {
+                font-size: 21px;
+            }
+
+            .navbar-brand small {
+                font-size: 10px;
+            }
+
+            .foundation-image {
+
+                aspect-ratio:
+                    4 / 5;
+            }
+
+            .foundation-badge span {
+                font-size: 11px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-3">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+                <div class="ms-2">
+
+                    <h3 class="m-0 fw-bold">
+                        KIRAN
+                    </h3>
+
+                    <small class="fw-bold">
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="about.html">
+                            About
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="center.html">
+                            Center
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="Parents review.html">
+                            Reviews
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="contact.html" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+     FOUNDATION / FOUNDER
+===================================================== -->
+
+    <section class="foundation-section">
+
+        <div class="container foundation-wrapper">
+
+
+            <!-- IMAGE -->
+
+            <div class="foundation-image-box">
+
+                <img src="images/founder.jpg" alt="Founder of Kiran Midbrain Academy" class="foundation-image">
+
+                <div class="foundation-badge">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>
+                        Empowering Young Minds
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="foundation-copy">
+
+                <span class="eyebrow">
+                    OUR FOUNDATION
+                </span>
+
+                <h3>
+
+                    The vision behind
+
+                    <span class="split">
+                        Kiran Midbrain Academy
+                    </span>
+
+                </h3>
+
+                <h4>
+                    Founded by [Founder Name]
+                </h4>
+
+                <p>
+                    Kiran Midbrain Academy was founded with
+                    a simple yet powerful belief — every child
+                    has unique abilities waiting to be discovered,
+                    encouraged and developed.
+                </p>
+
+                <p>
+                    Our foundation is dedicated to creating an
+                    environment where children can develop
+                    stronger memory, concentration, creativity,
+                    confidence and learning abilities through
+                    engaging and structured activities.
+                </p>
+
+                <p>
+                    With a child-focused approach, we work closely
+                    with parents and learners to encourage positive
+                    development and help every child discover
+                    their own potential.
+                </p>
+
+
+                <!-- FOUNDER MESSAGE -->
+
+                <div class="foundation-quote">
+
+                    <p>
+
+                        <i class="fa-solid fa-quote-left"></i>
+
+                        "Our goal is not just to teach children,
+                        but to help them believe in themselves,
+                        discover their abilities and grow with
+                        confidence."
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     MISSION / VISION
+===================================================== -->
+
+    <section class="bg-panel">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow justify-content-center">
+                    OUR PURPOSE
+                </span>
+
+                <h2>
+
+                    Mission &amp;
+
+                    <span class="split">
+                        Vision
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="mv-grid">
+
+
+                <!-- MISSION -->
+
+                <div class="mv-card logic">
+
+                    <div class="icon-badge">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+                    <h4>
+                        Our Mission
+                    </h4>
+
+                    <p>
+                        To help children improve memory,
+                        concentration, creativity and
+                        confidence through structured,
+                        effective learning programs.
+                    </p>
+
+                </div>
+
+
+                <!-- VISION -->
+
+                <div class="mv-card creative">
+
+                    <div class="icon-badge">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <h4>
+                        Our Vision
+                    </h4>
+
+                    <p>
+                        To raise confident, creative learners
+                        who recognize their full potential and
+                        use their abilities with confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow justify-content-center">
+                    WHY CHOOSE US
+                </span>
+
+                <h2>
+
+                    What makes us
+
+                    <span class="split">
+                        different?
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="feat-grid">
+
+
+                <div class="feat-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h5>
+                        Brain Development
+                    </h5>
+
+                    <p>
+                        Activities designed to improve
+                        mental abilities.
+                    </p>
+
+                </div>
+
+
+                <div class="feat-card">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <h5>
+                        Better Learning
+                    </h5>
+
+                    <p>
+                        Improve learning and memory skills.
+                    </p>
+
+                </div>
+
+
+                <div class="feat-card">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <h5>
+                        Creativity
+                    </h5>
+
+                    <p>
+                        Encourage creative, original
+                        thinking.
+                    </p>
+
+                </div>
+
+
+                <div class="feat-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h5>
+                        Confidence
+                    </h5>
+
+                    <p>
+                        Build confidence and positive
+                        self-belief.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     PROGRAMS
+===================================================== -->
+
+    <section class="bg-panel">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow justify-content-center">
+                    OUR PROGRAMS
+                </span>
+
+                <h2>
+
+                    Learning for
+
+                    <span class="split">
+                        every child
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="prog-grid">
+
+
+                <div class="prog-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h4>
+                        Midbrain Activation
+                    </h4>
+
+                    <p>
+                        Activities focused on brain
+                        development and whole-mind
+                        learning abilities.
+                    </p>
+
+                </div>
+
+
+                <div class="prog-card">
+
+                    <i class="fa-solid fa-memory"></i>
+
+                    <h4>
+                        Memory Enhancement
+                    </h4>
+
+                    <p>
+                        Training designed to sharpen
+                        memory, recall and sustained
+                        concentration.
+                    </p>
+
+                </div>
+
+
+                <div class="prog-card">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h4>
+                        Confidence Building
+                    </h4>
+
+                    <p>
+                        Activities that encourage
+                        self-belief and positive
+                        personal development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     CTA
+===================================================== -->
+
+    <section class="cta-wrapper">
+
+        <div class="cta-section">
+
+            <h2>
+                Ready to unlock your child's potential?
+            </h2>
+
+            <p>
+                Get in touch with Kiran Midbrain Academy
+                today — the first class is on us.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+
+                Contact Us
+
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-5">
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential of
+                        every child through specialized
+                        training programs designed to
+                        improve focus, memory, creativity
+                        and confidence.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="program.html">
+                        Programs
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- LOCATIONS -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Nagpur – Besa
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Nagpur – Dighori
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Warora
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chandrapur
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chimur
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ghughu &amp; Umred
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+                </p>
+
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                    <a href="https://wa.me/911234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

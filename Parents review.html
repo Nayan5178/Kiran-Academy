@@ -1,0 +1,2748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Parents Reviews | Kiran Midbrain Academy</title>
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================= -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================= -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* =========================================================
+           ROOT VARIABLES
+        ========================================================= */
+
+        :root {
+
+            /* Main Colors */
+
+            --bg: #fffdfb;
+
+            --surface: #ffffff;
+
+            --surface-solid: #ffffff;
+
+            --surface-2: #f2edff;
+
+            --border: rgba(118, 85, 232, 0.18);
+
+            --line: rgba(41, 35, 63, 0.09);
+
+            --text: #29233f;
+
+            --ink: #29233f;
+
+            --text-dim: #655f78;
+
+            --muted: #777188;
+
+            --violet: #7655e8;
+
+            --pink: #dc55a5;
+
+            --peach: #f5a03c;
+
+            --mint: #2fbf9b;
+
+            --amber: #f5a03c;
+
+            --amber-glow: rgba(245, 160, 60, 0.28);
+
+            --logic: #7655e8;
+
+            --logic-soft: rgba(118, 85, 232, 0.10);
+
+            --creative: #f5a03c;
+
+            --creative-soft: rgba(245, 160, 60, 0.12);
+
+            --success: #33b982;
+
+            --youtube: #ff0000;
+
+            --light-lavender: #f2edff;
+
+            --light-pink: #fff0f7;
+
+            --radius-lg: 22px;
+
+            --radius-md: 16px;
+
+            --shadow-soft:
+                0 20px 45px rgba(41, 35, 63, 0.10);
+
+        }
+
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family:
+                'Fraunces',
+                serif;
+
+            font-weight: 600;
+
+            line-height: 1.15;
+
+            margin: 0 0 .5em;
+
+            letter-spacing: -.01em;
+
+            color: var(--text);
+
+        }
+
+
+        /* =========================================================
+           COMMON BUTTON
+        ========================================================= */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            font-weight: 700;
+
+            font-size: 14.5px;
+
+            padding: 12px 22px;
+
+            border-radius: 999px;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: .25s ease;
+
+        }
+
+
+        .btn-primary {
+
+            background:
+                linear-gradient(135deg,
+                    var(--peach),
+                    var(--pink));
+
+            color: #ffffff;
+
+            box-shadow:
+                0 8px 24px rgba(220, 85, 165, .20);
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-3px) scale(1.02);
+
+            box-shadow:
+                0 14px 32px rgba(220, 85, 165, .28);
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================================
+           YOUTUBE BUTTON
+        ========================================================= */
+
+        .btn-youtube {
+
+            background:
+                linear-gradient(135deg,
+                    #ff0000,
+                    #d90000);
+
+            color: #fff;
+
+            box-shadow:
+                0 10px 30px rgba(255, 0, 0, .20);
+
+            padding:
+                14px 28px;
+
+        }
+
+
+        .btn-youtube:hover {
+
+            color: #fff;
+
+            transform:
+                translateY(-4px) scale(1.03);
+
+            box-shadow:
+                0 16px 38px rgba(255, 0, 0, .30);
+
+        }
+
+
+        .btn-youtube i {
+
+            font-size: 20px;
+
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .navbar {
+
+            padding: 10px 0;
+
+            min-height: 90px;
+
+            background:
+                rgba(255, 253, 251, 0.88) !important;
+
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
+
+            border-bottom:
+                1px solid var(--border);
+
+            transition:
+                all .3s ease;
+
+        }
+
+
+        .navbar.is-scrolled {
+
+            min-height: 70px;
+
+            background:
+                rgba(255, 253, 251, 0.97) !important;
+
+            box-shadow:
+                0 5px 25px rgba(41, 35, 63, 0.06);
+
+        }
+
+
+        .logo-img {
+
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 10px rgba(118, 85, 232, .22));
+
+            transition: .3s ease;
+
+        }
+
+
+        .navbar.is-scrolled .logo-img {
+
+            width: 60px;
+
+            height: 60px;
+
+        }
+
+
+        .navbar-brand {
+
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+
+        }
+
+
+        .navbar-brand h3 {
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color: var(--text) !important;
+
+            margin: 0;
+
+        }
+
+
+        .navbar-brand small {
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            font-size: 13px;
+
+            color: var(--peach) !important;
+
+            letter-spacing: .8px;
+
+            font-weight: 700;
+
+        }
+
+
+        .navbar-nav {
+
+            gap: 6px;
+
+        }
+
+
+        .navbar-nav .nav-link {
+
+            position: relative;
+
+            color:
+                var(--text-dim) !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding:
+                10px 14px !important;
+
+            transition:
+                all .3s ease;
+
+        }
+
+
+        .navbar-nav .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 2px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateX(-50%);
+
+            transition:
+                width .35s ease;
+
+        }
+
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+
+            color:
+                var(--text) !important;
+
+        }
+
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+
+            width: 70%;
+
+        }
+
+
+        .navbar .btn-glow {
+
+            padding:
+                11px 24px;
+
+            font-weight: 600;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--peach),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+                0 8px 22px var(--amber-glow);
+
+            transition: .3s ease;
+
+        }
+
+
+        .navbar .btn-glow:hover {
+
+            transform:
+                translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 14px 32px rgba(220, 85, 165, .25);
+
+            color: #ffffff;
+
+        }
+
+
+        .navbar-toggler {
+
+            border-color:
+                var(--border);
+
+            padding:
+                8px 11px;
+
+        }
+
+
+        .navbar-toggler:focus {
+
+            box-shadow:
+                0 0 0 .15rem rgba(118, 85, 232, .20);
+
+        }
+
+
+        .navbar-toggler-icon {
+
+            filter:
+                brightness(0) saturate(100%) invert(19%) sepia(15%) saturate(1298%) hue-rotate(216deg) brightness(92%) contrast(91%);
+
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+
+            padding:
+                90px 0 60px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset:
+                -25% -10% auto -10%;
+
+            height: 460px;
+
+            background:
+
+                radial-gradient(ellipse 700px 400px at 20% 20%,
+                    var(--logic-soft),
+                    transparent 60%),
+
+                radial-gradient(ellipse 700px 400px at 80% 10%,
+                    var(--creative-soft),
+                    transparent 60%);
+
+            pointer-events: none;
+
+        }
+
+
+        .hero-inner {
+
+            position: relative;
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 12.5px;
+
+            font-weight: 700;
+
+            letter-spacing: .14em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+        }
+
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 20px;
+
+            height: 1px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--peach));
+
+        }
+
+
+        .split {
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color: transparent;
+
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(32px, 5vw, 50px);
+
+            margin-top: 18px;
+
+            color: var(--text);
+
+        }
+
+
+        .hero p {
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+            max-width: 640px;
+
+            margin:
+                18px auto 0;
+
+        }
+
+
+        /* =========================================================
+           SECTION
+        ========================================================= */
+
+        section {
+
+            padding:
+                90px 0;
+
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 52px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-size:
+                clamp(28px, 4vw, 40px);
+
+            margin-top: 8px;
+
+            color: var(--text);
+
+        }
+
+
+        /* =========================================================
+           REVIEW GRID
+        ========================================================= */
+
+        .review-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 26px;
+
+        }
+
+
+        /* =========================================================
+           REVIEW CARD
+        ========================================================= */
+
+        .review-card {
+
+            background:
+                var(--surface-solid);
+
+            border:
+                1px solid var(--line);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            transition: .35s;
+
+            box-shadow:
+                0 8px 28px rgba(41, 35, 63, .06);
+
+        }
+
+
+        .review-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(118, 85, 232, .30);
+
+            box-shadow:
+                0 20px 45px rgba(41, 35, 63, .12);
+
+        }
+
+
+        /* =========================================================
+           VIDEO
+        ========================================================= */
+
+        .video-wrap {
+
+            position: relative;
+
+            aspect-ratio:
+                16 / 9;
+
+            background: #29233f;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+        }
+
+
+        .video-wrap img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            filter:
+                saturate(.9) brightness(.82);
+
+            transition: .4s;
+
+        }
+
+
+        .video-wrap:hover img {
+
+            filter:
+                saturate(1) brightness(.68);
+
+            transform:
+                scale(1.04);
+
+        }
+
+
+        .video-wrap iframe {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+
+            display: block;
+
+        }
+
+
+        /* =========================================================
+           PLAY BUTTON
+        ========================================================= */
+
+        .play {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 64px;
+
+            height: 64px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(135deg,
+                    #ff0000,
+                    #ff4d4d);
+
+            color: #fff;
+
+            font-size: 21px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: .3s;
+
+            box-shadow:
+                0 10px 25px rgba(255, 0, 0, .30);
+
+            z-index: 5;
+
+        }
+
+
+        .play:hover {
+
+            transform:
+                translate(-50%, -50%) scale(1.1);
+
+        }
+
+
+        /* =========================================================
+           VIDEO ERROR / PLACEHOLDER
+        ========================================================= */
+
+        .video-placeholder {
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 200px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(135deg,
+                    var(--light-lavender),
+                    var(--light-pink));
+
+            color: var(--muted);
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+
+        .video-placeholder i {
+
+            font-size: 42px;
+
+            color:
+                var(--youtube);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .video-placeholder strong {
+
+            color: var(--text);
+
+            font-size: 15px;
+
+        }
+
+
+        .video-placeholder span {
+
+            font-size: 12px;
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =========================================================
+           REVIEW BODY
+        ========================================================= */
+
+        .review-body {
+
+            padding:
+                28px;
+
+        }
+
+
+        .stars {
+
+            color:
+                var(--peach);
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .review-body p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                14.5px;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .review-body h5 {
+
+            font-size:
+                16.5px;
+
+            margin-bottom: 2px;
+
+            color: var(--text);
+
+        }
+
+
+        .review-body small {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12.5px;
+
+        }
+
+
+        /* =========================================================
+           MORE YOUTUBE SECTION
+        ========================================================= */
+
+        .youtube-more {
+
+            margin-top: 55px;
+
+            padding:
+                42px 25px;
+
+            border-radius:
+                26px;
+
+            border:
+                1px solid rgba(220, 85, 165, .18);
+
+            background:
+
+                radial-gradient(circle at 15% 50%,
+                    rgba(220, 85, 165, .10),
+                    transparent 35%),
+
+                radial-gradient(circle at 85% 50%,
+                    rgba(118, 85, 232, .10),
+                    transparent 35%),
+
+                var(--light-pink);
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .youtube-more h3 {
+
+            color: var(--text);
+
+            font-size:
+                clamp(24px, 3vw, 32px);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .youtube-more p {
+
+            color:
+                var(--muted);
+
+            max-width: 600px;
+
+            margin:
+                0 auto 25px;
+
+        }
+
+
+        .youtube-channel {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color:
+                #d84d4d;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .youtube-channel i {
+
+            color:
+                var(--youtube);
+
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta-wrapper {
+
+            padding-top: 0;
+
+        }
+
+
+        .cta-section {
+
+            margin:
+                0 24px;
+
+            border-radius:
+                32px;
+
+            background:
+                linear-gradient(120deg,
+                    var(--light-lavender),
+                    var(--light-pink));
+
+            border:
+                1px solid var(--line);
+
+            padding:
+                60px 40px;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 15px 40px rgba(41, 35, 63, .06);
+
+        }
+
+
+        .cta-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(circle at 20% 30%,
+                    var(--logic-soft),
+                    transparent 45%),
+
+                radial-gradient(circle at 80% 70%,
+                    var(--creative-soft),
+                    transparent 45%);
+
+        }
+
+
+        .cta-section>* {
+
+            position: relative;
+
+        }
+
+
+        .cta-section h2 {
+
+            font-size:
+                clamp(26px, 3.6vw, 36px);
+
+            color: var(--text);
+
+        }
+
+
+        .cta-section p {
+
+            color:
+                var(--muted);
+
+            margin-bottom:
+                26px;
+
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            padding:
+                60px 0 20px;
+
+            color:
+                var(--text-dim);
+
+            background:
+                #f8f5f3;
+
+            border-top:
+                1px solid var(--border);
+
+        }
+
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+        .footer-brand img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 8px rgba(118, 85, 232, .20));
+
+        }
+
+
+        .footer-brand h3 {
+
+            margin: 0;
+
+            color: var(--text);
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+        }
+
+
+        .footer-brand span {
+
+            color:
+                var(--peach);
+
+            font-weight: 700;
+
+            font-size: 13px;
+
+        }
+
+
+        .footer-description {
+
+            max-width: 440px;
+
+            margin-top: 20px;
+
+            color:
+                var(--text-dim);
+
+            line-height: 1.8;
+
+        }
+
+
+        footer h5 {
+
+            color: var(--text);
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+        }
+
+
+        footer .col-lg-3 a {
+
+            display: block;
+
+            color:
+                var(--text-dim);
+
+            margin-bottom: 11px;
+
+            transition: .3s;
+
+        }
+
+
+        footer .col-lg-3 a:hover {
+
+            color:
+                var(--violet);
+
+            transform:
+                translateX(5px);
+
+        }
+
+
+        footer .col-lg-4 p {
+
+            color:
+                var(--text-dim);
+
+            margin-bottom: 9px;
+
+        }
+
+
+        footer .col-lg-4 p i {
+
+            width: 20px;
+
+            color:
+                var(--violet);
+
+        }
+
+
+        footer hr {
+
+            margin-top:
+                45px;
+
+            border-color:
+                rgba(41, 35, 63, .10);
+
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap: 20px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .footer-bottom p {
+
+            margin: 0;
+
+            color:
+                #817b90;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 10px;
+
+        }
+
+
+        .social-icons a {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color:
+                var(--text);
+
+            background:
+                var(--light-lavender);
+
+            border:
+                1px solid var(--border);
+
+            transition: .3s;
+
+        }
+
+
+        .social-icons a:hover {
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateY(-5px);
+
+        }
+
+
+        /* =========================================================
+           FLOATING WHATSAPP
+        ========================================================= */
+
+        .whatsapp-float {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 58px;
+
+            height: 58px;
+
+            z-index: 9999;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: white;
+
+            background:
+                #25d366;
+
+            font-size: 29px;
+
+            box-shadow:
+                0 10px 30px rgba(37, 211, 102, .30);
+
+            transition: .3s;
+
+            animation:
+                whatsappPulse 2s infinite;
+
+        }
+
+
+        .whatsapp-float:hover {
+
+            color: white;
+
+            transform:
+                scale(1.1);
+
+        }
+
+
+        @keyframes whatsappPulse {
+
+            0% {
+
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, .40);
+
+            }
+
+            70% {
+
+                box-shadow:
+                    0 0 0 15px rgba(37, 211, 102, 0);
+
+            }
+
+            100% {
+
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, 0);
+
+            }
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media(max-width: 991px) {
+
+            .navbar {
+
+                min-height:
+                    78px;
+
+            }
+
+
+            .logo-img {
+
+                width:
+                    60px;
+
+                height:
+                    60px;
+
+            }
+
+
+            .navbar-nav {
+
+                padding-top:
+                    15px;
+
+                gap:
+                    2px;
+
+                align-items:
+                    flex-start !important;
+
+            }
+
+
+            .navbar-nav .nav-link {
+
+                padding:
+                    10px 8px !important;
+
+            }
+
+
+            .navbar .btn-glow {
+
+                margin-top:
+                    10px;
+
+                margin-left:
+                    0 !important;
+
+                display:
+                    inline-flex;
+
+            }
+
+
+            .review-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .footer-brand img {
+
+                width:
+                    60px;
+
+                height:
+                    60px;
+
+            }
+
+        }
+
+
+        @media(max-width: 767px) {
+
+            .navbar {
+
+                min-height:
+                    70px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    70px 0 50px;
+
+            }
+
+
+            .hero p {
+
+                font-size:
+                    15px;
+
+            }
+
+
+            section {
+
+                padding:
+                    65px 0;
+
+            }
+
+
+            .review-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .cta-section {
+
+                margin:
+                    0 15px;
+
+                padding:
+                    45px 22px;
+
+            }
+
+
+            .youtube-more {
+
+                margin-top:
+                    40px;
+
+                padding:
+                    35px 20px;
+
+            }
+
+
+            .footer-bottom {
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================= -->
+
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+
+        <div class="container-fluid px-3">
+
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+                <div class="ms-2">
+
+                    <h3>
+                        KIRAN
+                    </h3>
+
+                    <small>
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="center.html">
+                            Center
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="Parents review.html">
+                            Reviews
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="contact.html" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+        <div class="container hero-inner">
+
+
+            <span class="eyebrow" style="justify-content:center;">
+
+                PARENTS REVIEWS
+
+            </span>
+
+
+            <h1>
+
+                What parents
+
+                <span class="split">
+                    say about us
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Hear directly from parents about
+                their children's learning experience
+                at Kiran Midbrain Academy.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REVIEWS
+    ========================================================= -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="eyebrow" style="justify-content:center;">
+
+                    PARENT TESTIMONIALS
+
+                </span>
+
+
+                <h2>
+
+                    Real parents.
+
+                    <span class="split">
+                        Real experiences.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="review-grid">
+
+
+                <!-- =================================================
+                     REVIEW 1
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="9ivdfEB4NW0">
+
+                        <img src="https://img.youtube.com/vi/9ivdfEB4NW0/hqdefault.jpg" alt="Parent review video"
+                            onerror="this.style.display='none';">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "We have noticed a positive
+                            change in our child's concentration
+                            and confidence."
+
+                        </p>
+
+
+                        <h5>
+                            Mrs. Priya Sharma
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REVIEW 2
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="YOUTUBE_VIDEO_ID_2">
+
+                        <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_2/hqdefault.jpg"
+                            alt="Parent review video">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "The teachers are very supportive
+                            and the environment is comfortable
+                            for children."
+
+                        </p>
+
+
+                        <h5>
+                            Mr. Amit Patil
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REVIEW 3
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="YOUTUBE_VIDEO_ID_3">
+
+                        <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_3/hqdefault.jpg"
+                            alt="Parent review video">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "Our child enjoys attending
+                            the sessions and we can see
+                            improvement in memory."
+
+                        </p>
+
+
+                        <h5>
+                            Mrs. Neha Joshi
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REVIEW 4
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="YOUTUBE_VIDEO_ID_4">
+
+                        <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_4/hqdefault.jpg"
+                            alt="Parent review video">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "The learning activities are
+                            interesting and our child looks
+                            forward to every session."
+
+                        </p>
+
+
+                        <h5>
+                            Mr. Rahul Deshmukh
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REVIEW 5
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="YOUTUBE_VIDEO_ID_5">
+
+                        <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_5/hqdefault.jpg"
+                            alt="Parent review video">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "A very positive learning environment.
+                            The team encourages children at every step."
+
+                        </p>
+
+
+                        <h5>
+                            Mrs. Sneha More
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     REVIEW 6
+                ================================================= -->
+
+                <div class="review-card">
+
+                    <div class="video-wrap" data-yt="YOUTUBE_VIDEO_ID_6">
+
+                        <img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_6/hqdefault.jpg"
+                            alt="Parent review video">
+
+                        <button class="play" type="button" aria-label="Play parent review video">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="review-body">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+
+                        <p>
+
+                            "We are satisfied with the program.
+                            Our child has become more active
+                            and confident."
+
+                        </p>
+
+
+                        <h5>
+                            Mr. Vijay Wankhede
+                        </h5>
+
+
+                        <small>
+                            Parent
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 MORE YOUTUBE SECTION
+            ===================================================== -->
+
+            <div class="youtube-more">
+
+
+                <div class="youtube-channel">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                    @kirankakde7
+
+                </div>
+
+
+                <h3>
+
+                    Watch More Videos
+
+                    <span class="split">
+                        on YouTube
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    Explore more parent testimonials,
+                    student activities, academy moments
+                    and learning videos on our YouTube channel.
+
+                </p>
+
+
+                <a href="https://www.youtube.com/@kirankakde7" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-youtube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                    Watch More Videos on YouTube
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CTA
+    ========================================================= -->
+
+    <section class="cta-wrapper">
+
+        <div class="cta-section">
+
+
+            <h2>
+
+                Are you a
+
+                <span class="split">
+                    parent?
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                We would love to hear about your
+                experience with us.
+
+            </p>
+
+
+            <a href="contact.html" class="btn btn-primary">
+
+                Share Your Experience
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="row g-5">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-5">
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential
+                        of every child through specialized
+                        training programs designed to improve
+                        focus, memory, creativity and confidence.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+
+                    <a href="programs.html">
+                        Programs
+                    </a>
+
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOCATIONS -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Besa
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Dighori
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Warora
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chandrapur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chimur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Ghughu &amp; Umred
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+
+                <p>
+
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <div class="social-icons">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="https://www.youtube.com/@kirankakde7" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         FLOATING WHATSAPP
+    ========================================================= -->
+
+    <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+        aria-label="Chat on WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- =========================================================
+         BOOTSTRAP JS
+    ========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =====================================================
+           NAVBAR SCROLL EFFECT
+        ===================================================== */
+
+        const nav =
+            document.getElementById("mainNav");
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 30) {
+
+                    nav.classList.add(
+                        "is-scrolled"
+                    );
+
+                } else {
+
+                    nav.classList.remove(
+                        "is-scrolled"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           MOBILE MENU CLOSE AFTER CLICK
+        ===================================================== */
+
+        document
+            .querySelectorAll(
+                ".navbar-nav .nav-link"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        () => {
+
+                            const menu =
+                                document.getElementById(
+                                    "menu"
+                                );
+
+
+                            const bsCollapse =
+                                bootstrap.Collapse
+                                    .getInstance(menu);
+
+
+                            if (bsCollapse) {
+
+                                bsCollapse.hide();
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* =====================================================
+           YOUTUBE VIDEO PLAY
+           
+           data-yt must contain ONLY YouTube VIDEO ID.
+
+           Example:
+           data-yt="9ivdfEB4NW0"
+        ===================================================== */
+
+        document
+            .querySelectorAll(".video-wrap")
+            .forEach(
+                wrap => {
+
+                    wrap.addEventListener(
+                        "click",
+                        function () {
+
+
+                            const videoId =
+                                this.getAttribute(
+                                    "data-yt"
+                                );
+
+
+                            /* ---------------------------------
+                               CHECK VIDEO ID
+                            --------------------------------- */
+
+                            if (
+                                !videoId ||
+                                videoId.startsWith(
+                                    "YOUTUBE_VIDEO_ID"
+                                )
+                            ) {
+
+                                this.innerHTML = `
+
+                                    <div class="video-placeholder">
+
+                                        <i class="fa-brands fa-youtube"></i>
+
+                                        <strong>
+                                            Video Coming Soon
+                                        </strong>
+
+                                        <span>
+                                            Add the real YouTube video ID
+                                        </span>
+
+                                    </div>
+
+                                `;
+
+                                return;
+
+                            }
+
+
+                            /* ---------------------------------
+                               CREATE YOUTUBE IFRAME
+                            --------------------------------- */
+
+                            const iframe =
+                                document.createElement(
+                                    "iframe"
+                                );
+
+
+                            iframe.src =
+                                "https://www.youtube.com/embed/"
+                                + videoId
+                                + "?autoplay=1&rel=0";
+
+
+                            iframe.title =
+                                "Kiran Midbrain Academy YouTube Video";
+
+
+                            iframe.allow =
+                                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+
+                            iframe.allowFullscreen =
+                                true;
+
+
+                            iframe.setAttribute(
+                                "loading",
+                                "lazy"
+                            );
+
+
+                            /* ---------------------------------
+                               REMOVE THUMBNAIL + PLAY BUTTON
+                            --------------------------------- */
+
+                            this.innerHTML = "";
+
+                            this.appendChild(
+                                iframe
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* =====================================================
+           PREVENT PLACEHOLDER THUMBNAIL ERRORS
+        ===================================================== */
+
+        document
+            .querySelectorAll(
+                '.video-wrap img'
+            )
+            .forEach(
+                img => {
+
+                    img.addEventListener(
+                        "error",
+                        function () {
+
+                            this.style.display =
+                                "none";
+
+                        }
+                    );
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiran Midbrain Academy - News</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,0..144,500;1,0..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* =========================================================
+           ROOT VARIABLES - LIGHT THEME
+        ========================================================= */
+
+        :root {
+
+            /* Main Colors */
+            --bg: #fffdfb;
+            --surface: #ffffff;
+            --surface-solid: #ffffff;
+            --surface-2: #f2edff;
+
+            /* Borders */
+            --border: rgba(118, 85, 232, 0.18);
+            --line: rgba(41, 35, 63, 0.10);
+
+            /* Text */
+            --text: #29233f;
+            --text-dim: #625b78;
+            --muted: #77718b;
+
+            /* Brand Colors */
+            --violet: #7655e8;
+            --logic: #7655e8;
+
+            --amber: #f5a03c;
+            --creative: #f5a03c;
+
+            --pink: #dc55a5;
+            --mint: #2bbf9f;
+
+            /* Glows */
+            --amber-glow: rgba(245, 160, 60, 0.25);
+            --pink-glow: rgba(220, 85, 165, 0.25);
+
+            /* Soft Backgrounds */
+            --logic-soft: rgba(118, 85, 232, 0.10);
+            --creative-soft: rgba(245, 160, 60, 0.10);
+
+            --light-lavender: #f2edff;
+            --light-pink: #fff0f7;
+        }
+
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1150px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Fraunces', serif;
+
+            font-weight: 600;
+
+            line-height: 1.15;
+
+            letter-spacing: -.01em;
+        }
+
+        .split {
+            background: linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 12.5px;
+
+            font-weight: 700;
+
+            letter-spacing: .14em;
+
+            text-transform: uppercase;
+
+            color: var(--muted);
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 20px;
+
+            height: 1px;
+
+            background: linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .navbar {
+            padding: 10px 0;
+
+            min-height: 90px;
+
+            background: rgba(255, 253, 251, 0.88) !important;
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--border);
+
+            box-shadow:
+                0 4px 20px rgba(41, 35, 63, 0.04);
+        }
+
+        .logo-img {
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 10px rgba(118, 85, 232, 0.25));
+        }
+
+        .navbar-brand {
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+        }
+
+        .navbar-brand h3 {
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color: var(--text) !important;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+        .navbar-brand small {
+            font-size: 16px;
+
+            color: var(--amber) !important;
+
+            letter-spacing: .5px;
+        }
+
+        .navbar-nav {
+            gap: 6px;
+        }
+
+        .navbar-nav .nav-link {
+            position: relative;
+
+            color: var(--text-dim) !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding: 10px 14px !important;
+
+            transition: all .3s ease;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 2px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background: linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform: translateX(-50%);
+
+            transition: width .35s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--text) !important;
+        }
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 70%;
+        }
+
+        .navbar .btn-glow {
+            padding: 11px 24px;
+
+            font-weight: 700;
+
+            color: #ffffff !important;
+
+            background: linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+                0 8px 22px var(--pink-glow);
+
+            transition: .3s ease;
+        }
+
+        .navbar .btn-glow:hover {
+            transform: translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 14px 32px var(--pink-glow);
+
+            color: #ffffff !important;
+        }
+
+        .navbar-toggler {
+            border-color: var(--border);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow:
+                0 0 0 .2rem rgba(118, 85, 232, .12);
+        }
+
+        .navbar-toggler-icon {
+            filter: none;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            padding: 100px 0 80px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            inset: -25% -10% auto -10%;
+
+            height: 460px;
+
+            background:
+                radial-gradient(ellipse 700px 400px at 20% 20%,
+                    var(--logic-soft),
+                    transparent 60%),
+
+                radial-gradient(ellipse 700px 400px at 80% 10%,
+                    var(--creative-soft),
+                    transparent 60%);
+
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 50px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 4.5vw, 50px);
+
+            margin: 18px 0 16px;
+
+            color: var(--text);
+        }
+
+        .hero p {
+            color: var(--muted);
+
+            line-height: 1.8;
+
+            font-size: 16px;
+        }
+
+        .hero-img {
+            width: 100%;
+
+            max-height: 380px;
+
+            object-fit: contain;
+
+            animation: float 3s ease-in-out infinite;
+
+            filter:
+                drop-shadow(0 20px 40px rgba(118, 85, 232, 0.14));
+        }
+
+        @keyframes float {
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+        .actions {
+            margin-top: 26px;
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            color: #fff !important;
+
+            padding: 11px 20px;
+
+            border-radius: 999px;
+
+            font-weight: 700;
+
+            font-size: 14.5px;
+
+            transition: .3s;
+
+            box-shadow:
+                0 8px 20px rgba(118, 85, 232, 0.14);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 30px rgba(118, 85, 232, 0.25);
+
+            color: #fff !important;
+        }
+
+        .outline {
+            display: inline-flex;
+
+            align-items: center;
+
+            border: 1px solid rgba(41, 35, 63, 0.14);
+
+            color: var(--text);
+
+            padding: 11px 20px;
+
+            border-radius: 999px;
+
+            transition: .3s;
+
+            font-weight: 600;
+
+            font-size: 14.5px;
+
+            background: #ffffff;
+        }
+
+        .outline:hover {
+            background: var(--light-lavender);
+
+            color: var(--violet);
+
+            border-color: rgba(118, 85, 232, 0.25);
+        }
+
+
+        /* =========================================================
+           NEWS HEADER
+        ========================================================= */
+
+        .news-header {
+            text-align: center;
+
+            padding: 20px 0 40px;
+        }
+
+        .news-header h1 {
+            font-size: clamp(28px, 4vw, 40px);
+
+            margin-top: 8px;
+
+            color: var(--text);
+        }
+
+        .news-header p {
+            color: var(--muted);
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================================================
+           NEWS CARDS
+        ========================================================= */
+
+        .news-section {
+            padding: 20px 0 80px;
+        }
+
+        .news {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface-solid);
+
+            border: 1px solid rgba(41, 35, 63, 0.09);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition: .35s;
+
+            box-shadow:
+                0 8px 25px rgba(41, 35, 63, 0.045);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(118, 85, 232, 0.20);
+
+            box-shadow:
+                0 18px 40px rgba(41, 35, 63, 0.10);
+        }
+
+        .card-image {
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--light-lavender);
+        }
+
+        .card img {
+            display: block;
+
+            width: 100%;
+
+            height: 210px;
+
+            object-fit: cover;
+
+            transition: .5s;
+
+            filter:
+                saturate(.92) brightness(.98);
+        }
+
+        .card:hover img {
+            transform: scale(1.07);
+        }
+
+        .card-body {
+            padding: 22px;
+        }
+
+        .date {
+            color: var(--creative);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+        }
+
+        .card h3 {
+            font-size: 17.5px;
+
+            line-height: 1.4;
+
+            margin: 10px 0;
+
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--muted);
+
+            font-size: 13.5px;
+
+            line-height: 1.7;
+        }
+
+        .read {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            color: var(--violet);
+
+            font-size: 13.5px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+        .read:hover {
+            color: var(--pink);
+
+            transform: translateX(3px);
+        }
+
+
+        /* =========================================================
+           LOAD MORE
+        ========================================================= */
+
+        .load-area {
+            text-align: center;
+
+            margin-top: 44px;
+        }
+
+        .load-btn {
+            border: 1px solid rgba(118, 85, 232, 0.18);
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            background: var(--light-lavender);
+
+            color: var(--text);
+
+            transition: .3s;
+
+            box-shadow:
+                0 5px 15px rgba(118, 85, 232, 0.05);
+        }
+
+        .load-btn:hover {
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            border-color: transparent;
+
+            transform: translateY(-3px);
+
+            color: #fff;
+        }
+
+        .load-btn i {
+            margin-left: 7px;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta {
+            padding: 0 0 90px;
+        }
+
+        .cta-box {
+            margin: 0 24px;
+
+            border-radius: 32px;
+
+            background:
+                linear-gradient(120deg,
+                    #f2edff,
+                    #fff0f7);
+
+            border: 1px solid rgba(118, 85, 232, 0.12);
+
+            padding: 50px 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 12px 35px rgba(41, 35, 63, 0.06);
+        }
+
+        .cta-box::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                radial-gradient(circle at 15% 30%,
+                    rgba(118, 85, 232, 0.10),
+                    transparent 45%),
+
+                radial-gradient(circle at 85% 70%,
+                    rgba(220, 85, 165, 0.10),
+                    transparent 45%);
+        }
+
+        .cta-box>* {
+            position: relative;
+        }
+
+        .cta h2 {
+            font-size:
+                clamp(22px, 3.2vw, 28px);
+
+            color: var(--text);
+        }
+
+        .cta p {
+            margin-top: 8px;
+
+            color: var(--muted);
+        }
+
+        .yellow {
+            background:
+                linear-gradient(90deg,
+                    var(--amber),
+                    var(--pink));
+
+            color: #ffffff !important;
+        }
+
+        .yellow:hover {
+            color: #ffffff !important;
+
+            box-shadow:
+                0 15px 30px rgba(220, 85, 165, 0.20);
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 38px;
+        }
+
+        .section-title h2 {
+            font-size:
+                clamp(26px, 3.6vw, 34px);
+
+            color: var(--text);
+        }
+
+        .section-title p {
+            color: var(--muted);
+
+            margin-top: 8px;
+        }
+
+        .contacts {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .contact {
+            background: var(--surface-solid);
+
+            border: 1px solid rgba(41, 35, 63, 0.09);
+
+            text-align: center;
+
+            padding: 32px;
+
+            border-radius: 20px;
+
+            transition: .3s;
+
+            box-shadow:
+                0 8px 25px rgba(41, 35, 63, 0.04);
+        }
+
+        .contact:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(118, 85, 232, 0.20);
+
+            box-shadow:
+                0 18px 40px rgba(41, 35, 63, 0.09);
+        }
+
+        .contact i {
+            color: var(--creative);
+
+            font-size: 30px;
+
+            margin-bottom: 14px;
+        }
+
+        .contact:nth-child(2) i {
+            color: var(--violet);
+        }
+
+        .contact:nth-child(3) i {
+            color: #25a96a;
+        }
+
+        .contact h3 {
+            font-size: 18px;
+
+            color: var(--text);
+        }
+
+        .contact p {
+            color: var(--muted);
+
+            margin-top: 6px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 60px 0 20px;
+
+            color: var(--text-dim);
+
+            background:
+                #29233f;
+
+            border-top:
+                1px solid rgba(118, 85, 232, 0.15);
+        }
+
+        .footer-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .footer-brand img {
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 8px rgba(255, 255, 255, 0.18));
+        }
+
+        .footer-brand h3 {
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+        }
+
+        .footer-brand span {
+            color: var(--amber);
+
+            font-weight: 700;
+
+            font-size: 13px;
+        }
+
+        .footer-description {
+            max-width: 440px;
+
+            margin-top: 20px;
+
+            color: #d9d4e6;
+
+            line-height: 1.8;
+        }
+
+        footer h5 {
+            color: #ffffff;
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+        }
+
+        footer .col-lg-3 a {
+            display: block;
+
+            color: #d1ccdf;
+
+            margin-bottom: 11px;
+
+            transition: .3s;
+        }
+
+        footer .col-lg-3 a:hover {
+            color: var(--amber);
+
+            transform: translateX(5px);
+        }
+
+        footer .col-lg-4 p {
+            color: #d1ccdf;
+
+            margin-bottom: 9px;
+        }
+
+        footer .col-lg-4 p i {
+            width: 20px;
+
+            color: #a98df5;
+        }
+
+        footer hr {
+            margin-top: 45px;
+
+            border-color:
+                rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+
+            color: #b6b0c7;
+
+            font-size: 13px;
+        }
+
+        .social-icons {
+            display: flex;
+
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            transition: .3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffffff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform: translateY(-5px);
+
+            border-color: transparent;
+        }
+
+
+        /* =========================================================
+           WHATSAPP ANIMATION
+        ========================================================= */
+
+        @keyframes whatsappPulse {
+
+            0% {
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, .35);
+            }
+
+            70% {
+                box-shadow:
+                    0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 0 0 rgba(37, 211, 102, 0);
+            }
+
+        }
+
+
+        /* =========================================================
+           NEWS POPUP
+        ========================================================= */
+
+        .popup {
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(41, 35, 63, .45);
+
+            backdrop-filter: blur(6px);
+
+            -webkit-backdrop-filter: blur(6px);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 99999;
+
+            padding: 20px;
+        }
+
+        .popup.show {
+            display: flex;
+        }
+
+        .popup-box {
+            position: relative;
+
+            width: 100%;
+
+            max-width: 600px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid rgba(118, 85, 232, 0.15);
+
+            border-radius: 22px;
+
+            padding: 26px;
+
+            text-align: center;
+
+            animation:
+                popup .25s ease;
+
+            box-shadow:
+                0 25px 70px rgba(41, 35, 63, 0.20);
+        }
+
+        @keyframes popup {
+
+            from {
+                transform: scale(.9);
+
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+
+                opacity: 1;
+            }
+
+        }
+
+        .popup-box img {
+            width: 100%;
+
+            max-height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 14px;
+
+            margin-bottom: 16px;
+        }
+
+        .popup-box h2 {
+            font-size: 23px;
+
+            margin-bottom: 10px;
+
+            color: var(--text);
+        }
+
+        .popup-box p {
+            color: var(--muted);
+
+            line-height: 1.7;
+        }
+
+        .close {
+            position: absolute;
+
+            top: 10px;
+
+            right: 10px;
+
+            width: 34px;
+
+            height: 34px;
+
+            border:
+                1px solid rgba(41, 35, 63, 0.10);
+
+            border-radius: 50%;
+
+            background:
+                var(--light-lavender);
+
+            color: var(--text);
+
+            font-size: 19px;
+
+            cursor: pointer;
+
+            z-index: 2;
+
+            transition: .25s;
+        }
+
+        .close:hover {
+            background: var(--pink);
+
+            color: #ffffff;
+
+            border-color: transparent;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .navbar-collapse {
+                margin-top: 15px;
+
+                padding: 15px;
+
+                background:
+                    rgba(255, 253, 251, .98);
+
+                border-radius: 15px;
+
+                border:
+                    1px solid var(--border);
+
+                box-shadow:
+                    0 15px 35px rgba(41, 35, 63, 0.08);
+            }
+
+            .navbar-nav {
+                gap: 2px;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 12px 14px !important;
+            }
+
+            .navbar-nav .nav-link::after {
+                display: none;
+            }
+
+            .navbar .btn-glow {
+                margin-top: 10px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+
+            .news {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .contacts {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .logo-img {
+                width: 65px;
+
+                height: 65px;
+            }
+
+            .navbar {
+                min-height: 75px;
+            }
+
+            .navbar-brand h3 {
+                font-size: 24px;
+            }
+
+            .navbar-brand small {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 70px 0 60px;
+            }
+
+            .hero-img {
+                max-height: 300px;
+            }
+
+            .news {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                height: 220px;
+            }
+
+            .cta-box {
+                margin: 0 10px;
+
+                padding:
+                    40px 25px;
+            }
+
+            .contact-section {
+                padding: 60px 0;
+            }
+
+            footer {
+                padding-top: 50px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                width: 54px;
+
+                height: 54px;
+
+                right: 18px;
+
+                bottom: 18px;
+
+                font-size: 26px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .popup-box {
+                padding: 18px;
+            }
+
+            .popup-box img {
+                max-height: 230px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================= -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-3">
+
+            <!-- Logo -->
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+                <div class="ms-2">
+
+                    <h3 class="m-0 fw-bold">
+                        KIRAN
+                    </h3>
+
+                    <small class="fw-bold">
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu -->
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="center.html">
+                            Center
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Parents review.html">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">
+                            News
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="contact.html" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+        <div class="container hero-grid">
+
+            <div>
+
+                <span class="eyebrow">
+                    LATEST ACADEMY UPDATES
+                </span>
+
+                <h1>
+
+                    Discover Our
+
+                    <span class="split">
+                        Latest News
+                    </span>
+
+                </h1>
+
+                <p>
+                    Stay updated with the latest activities,
+                    events, achievements and special moments
+                    from Kiran Midbrain Academy.
+                </p>
+
+                <div class="actions">
+
+                    <a href="#news" class="btn-main">
+
+                        View News
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                    <a href="contact.html" class="outline">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <img src="images/hero.png" class="hero-img" alt="Kiran Midbrain Academy">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NEWS TITLE
+    ========================================================= -->
+
+    <section class="news-header">
+
+        <div class="container">
+
+            <span class="eyebrow" style="justify-content:center;">
+
+                UPDATES
+
+            </span>
+
+            <h1>
+
+                Latest
+
+                <span class="split">
+                    News
+                </span>
+
+            </h1>
+
+            <p>
+                Our latest activities, events and achievements.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NEWS CARDS
+    ========================================================= -->
+
+    <section class="news-section" id="news">
+
+        <div class="container">
+
+            <div class="news" id="newsContainer">
+            </div>
+
+
+            <div class="load-area">
+
+                <button class="load-btn" id="loadBtn" onclick="loadMore()">
+
+                    Load More
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CTA
+    ========================================================= -->
+
+    <section class="cta">
+
+        <div class="cta-box">
+
+            <div>
+
+                <h2>
+                    Ready to Unlock Your Child's Potential?
+                </h2>
+
+                <p>
+                    Join Kiran Midbrain Academy today.
+                </p>
+
+            </div>
+
+            <a href="contact.html" class="btn-main yellow">
+
+                Enroll Now
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================= -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span class="eyebrow" style="justify-content:center;">
+
+                    REACH OUT
+
+                </span>
+
+                <h2>
+
+                    Contact
+
+                    <span class="split">
+                        Us
+                    </span>
+
+                </h2>
+
+                <p>
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+            <div class="contacts">
+
+                <div class="contact">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <p>
+                        Nagpur, Maharashtra
+                    </p>
+
+                </div>
+
+
+                <div class="contact">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <h3>
+                        Call Us
+                    </h3>
+
+                    <p>
+                        +91 9876543210
+                    </p>
+
+                </div>
+
+
+                <div class="contact">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        +91 9876543210
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-5">
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential of every
+                        child through specialized training
+                        programs designed to improve focus,
+                        memory, creativity and confidence.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="programs.html">
+                        Programs
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="news.html">
+                        News
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- LOCATIONS -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Nagpur – Besa
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Nagpur – Dighori
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Warora
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chandrapur
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chimur
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ghughu & Umred
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+                </p>
+
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                    <a href="https://wa.me/911234567890" target="_blank" aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         NEWS POPUP
+    ========================================================= -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <button class="close" onclick="closeNews()" aria-label="Close">
+
+                ×
+
+            </button>
+
+            <img id="popupImage" src="" alt="News">
+
+            <h2 id="popupTitle"></h2>
+
+            <p id="popupText"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- =========================================================
+         NEWS JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        const titles = [
+
+            "New Midbrain Development Program",
+            "Independence Day Celebration",
+            "Students Show Amazing Progress",
+            "Creative Learning Activity",
+            "Brain Development Workshop",
+            "Children's Special Training Session",
+            "Memory Improvement Activity",
+            "Focus Development Session",
+            "Fun Learning Day",
+            "Student Achievement",
+            "Special Academy Event",
+            "Midbrain Training Session",
+            "Creative Thinking Activity",
+            "Confidence Building Program",
+            "Student Performance Day",
+            "Learning Through Activities",
+            "Brain Power Training",
+            "Children's Development Session",
+            "Academy Celebration",
+            "Special Learning Program",
+            "Student Success Story",
+            "Memory Training Activity",
+            "Concentration Development",
+            "Fun With Learning",
+            "Special Kids Activity",
+            "Academy Training Session",
+            "Creative Kids Program",
+            "Student Learning Activity",
+            "Brain Development Workshop",
+            "Children's Achievement",
+            "Academy Special Event",
+            "Learning & Growth Program"
+
+        ];
+
+
+        const descriptions = [
+
+            "Our students participated in an exciting midbrain development program.",
+
+            "Students celebrated Independence Day with learning activities and performances.",
+
+            "Our students continue to show wonderful progress through regular training.",
+
+            "Children enjoyed a creative activity designed to improve imagination.",
+
+            "A special workshop focused on memory, concentration and brain development.",
+
+            "Students participated in a fun and educational training session.",
+
+            "An engaging activity helped students strengthen their memory skills.",
+
+            "Students practiced activities designed to improve concentration and focus.",
+
+            "A fun learning day filled with activities and happy moments.",
+
+            "Celebrating the achievements and progress of our talented students."
+
+        ];
+
+
+        /*
+            NEWS IMAGES
+
+            images/image1.jpeg
+            images/image2.jpeg
+            ...
+            images/image32.jpeg
+        */
+
+        const totalImages = 32;
+
+        const imagesPerLoad = 6;
+
+        let currentImage = 0;
+
+
+        const newsContainer =
+            document.getElementById(
+                "newsContainer"
+            );
+
+
+        const loadBtn =
+            document.getElementById(
+                "loadBtn"
+            );
+
+
+        function loadMore() {
+
+            const nextImage =
+                Math.min(
+                    currentImage +
+                    imagesPerLoad,
+                    totalImages
+                );
+
+
+            for (
+                let i = currentImage + 1;
+                i <= nextImage;
+                i++
+            ) {
+
+                const title =
+                    titles[
+                    (i - 1) %
+                    titles.length
+                    ];
+
+
+                const description =
+                    descriptions[
+                    (i - 1) %
+                    descriptions.length
+                    ];
+
+
+                newsContainer.innerHTML += `
+
+                    <article class="card">
+
+                        <div class="card-image">
+
+                            <img
+                                src="images/image${i}.jpeg"
+                                alt="${title}"
+                                onerror="this.closest('.card').remove()">
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="date">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                2026
+
+                            </div>
+
+
+                            <h3>
+                                ${title}
+                            </h3>
+
+
+                            <p>
+                                ${description}
+                            </p>
+
+
+                            <a
+                                href="javascript:void(0)"
+                                class="read"
+                                onclick="openNews(${i})">
+
+                                Read More →
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                `;
+
+            }
+
+
+            currentImage = nextImage;
+
+
+            if (
+                currentImage >=
+                totalImages
+            ) {
+
+                loadBtn.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+        function openNews(number) {
+
+            const title =
+                titles[
+                (number - 1) %
+                titles.length
+                ];
+
+
+            const description =
+                descriptions[
+                (number - 1) %
+                descriptions.length
+                ];
+
+
+            document.getElementById(
+                "popupImage"
+            ).src =
+                `images/image${number}.jpeg`;
+
+
+            document.getElementById(
+                "popupTitle"
+            ).innerText =
+                title;
+
+
+            document.getElementById(
+                "popupText"
+            ).innerText =
+                description;
+
+
+            document.getElementById(
+                "popup"
+            ).classList.add("show");
+
+        }
+
+
+        function closeNews() {
+
+            document.getElementById(
+                "popup"
+            ).classList.remove("show");
+
+        }
+
+
+        document
+            .getElementById("popup")
+            .addEventListener(
+                "click",
+                function (e) {
+
+                    if (
+                        e.target === this
+                    ) {
+
+                        closeNews();
+
+                    }
+
+                }
+            );
+
+
+        document.addEventListener(
+            "keydown",
+            function (e) {
+
+                if (
+                    e.key === "Escape"
+                ) {
+
+                    closeNews();
+
+                }
+
+            }
+        );
+
+
+        /* Initial News Load */
+
+        loadMore();
+
+    </script>
+
+
+</body>
+
+</html>

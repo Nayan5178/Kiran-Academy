@@ -1,0 +1,3117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Kiran Midbrain Academy</title>
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ===================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+        /* =====================================================
+           ROOT VARIABLES - NEW COLOR PALETTE
+        ===================================================== */
+
+        :root {
+
+            --bg: #fffdfb;
+
+            --surface: #ffffff;
+
+            --surface-2: #f2edff;
+
+            --border: rgba(118, 85, 232, 0.16);
+
+            --text: #29233f;
+
+            --text-dim: #6f6985;
+
+            --violet: #7655e8;
+
+            --pink: #dc55a5;
+
+            --peach: #f5a03c;
+
+            --light-lavender: #f2edff;
+
+            --light-pink: #fff0f7;
+
+            --violet-glow: rgba(118, 85, 232, 0.25);
+
+            --pink-glow: rgba(220, 85, 165, 0.25);
+
+            --peach-glow: rgba(245, 160, 60, 0.25);
+        }
+
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            padding: 10px 0;
+
+            min-height: 90px;
+
+            background: rgba(255, 253, 251, 0.94) !important;
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--border);
+
+            box-shadow: 0 4px 25px rgba(41, 35, 63, 0.04);
+        }
+
+
+        .logo-img {
+
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 10px rgba(118, 85, 232, 0.22));
+        }
+
+
+        .navbar-brand {
+
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+        }
+
+
+        .navbar-brand h3 {
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color: var(--text) !important;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        .navbar-brand small {
+
+            font-size: 16px;
+
+            color: var(--violet) !important;
+
+            letter-spacing: .5px;
+        }
+
+
+        .navbar-nav {
+
+            gap: 6px;
+        }
+
+
+        .navbar-nav .nav-link {
+
+            position: relative;
+
+            color: #655f78 !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding: 10px 14px !important;
+
+            transition: all .3s ease;
+        }
+
+
+        .navbar-nav .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 2px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform: translateX(-50%);
+
+            transition: width .35s ease;
+        }
+
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+
+            color: var(--violet) !important;
+        }
+
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+
+            width: 70%;
+        }
+
+
+        /* =====================================================
+           NAVBAR BUTTON
+        ===================================================== */
+
+        .navbar .btn-glow {
+
+            padding: 11px 24px;
+
+            font-weight: 700;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+                0 8px 22px var(--violet-glow);
+
+            transition: .3s ease;
+        }
+
+
+        .navbar .btn-glow:hover {
+
+            transform:
+                translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 14px 32px var(--pink-glow);
+
+            color: #ffffff;
+        }
+
+
+        .navbar-toggler {
+
+            border-color: var(--border);
+
+            padding: 8px 11px;
+        }
+
+
+        .navbar-toggler:focus {
+
+            box-shadow:
+                0 0 0 3px rgba(118, 85, 232, .15);
+        }
+
+
+        .navbar-toggler-icon {
+
+            filter: none;
+
+            background-image:
+                url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2329233f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+
+            padding: 120px 0 55px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .intro::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -30% -10% auto -10%;
+
+            height: 400px;
+
+            background:
+
+                radial-gradient(ellipse 600px 350px at 25% 20%,
+                    rgba(118, 85, 232, .14),
+                    transparent 60%),
+
+                radial-gradient(ellipse 600px 350px at 75% 10%,
+                    rgba(245, 160, 60, .12),
+                    transparent 60%);
+
+            pointer-events: none;
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            font-size: 12.5px;
+
+            font-weight: 800;
+
+            letter-spacing: .14em;
+
+            text-transform: uppercase;
+
+            color: var(--violet);
+
+            position: relative;
+        }
+
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 20px;
+
+            height: 2px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+        }
+
+
+        .eyebrow::after {
+
+            content: "";
+
+            width: 20px;
+
+            height: 2px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--pink),
+                    var(--peach));
+        }
+
+
+        /* =====================================================
+           GRADIENT TEXT
+        ===================================================== */
+
+        .split {
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--peach));
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .intro h2 {
+
+            position: relative;
+
+            font-size: clamp(30px,
+                    4vw,
+                    46px);
+
+            margin-top: 14px;
+
+            margin-bottom: 8px;
+
+            font-weight: 700;
+
+            color: var(--text);
+        }
+
+
+        .intro p {
+
+            position: relative;
+
+            color: var(--text-dim);
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           CATEGORY GALLERY
+        ===================================================== */
+
+        .gallery-categories {
+
+            padding: 20px 0 80px;
+        }
+
+
+        .gallery-category {
+
+            margin-bottom: 110px;
+        }
+
+
+        .gallery-category:last-child {
+
+            margin-bottom: 0;
+        }
+
+
+        .category-heading {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .category-heading h2 {
+
+            font-size: clamp(30px,
+                    4vw,
+                    44px);
+
+            margin: 12px 0 8px;
+
+            font-weight: 700;
+
+            color: var(--text);
+        }
+
+
+        .category-heading p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: var(--text-dim);
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           GALLERY CARD
+        ===================================================== */
+
+        .gallery-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            cursor: pointer;
+
+            transition:
+                transform .4s ease,
+                border-color .4s ease,
+                box-shadow .4s ease;
+
+            width: 100%;
+
+            box-shadow:
+                0 8px 25px rgba(41, 35, 63, 0.05);
+        }
+
+
+        /* =====================================================
+           IMAGE
+           IMAGE WILL NOT BE CROPPED
+        ===================================================== */
+
+        .gallery-img {
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            display: block;
+
+            background:
+                linear-gradient(135deg,
+                    var(--light-lavender),
+                    var(--light-pink));
+
+            transition:
+                transform .5s ease;
+        }
+
+
+        /* =====================================================
+           CARD OVERLAY
+        ===================================================== */
+
+        .gallery-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(to top,
+                    rgba(41, 35, 63, .65),
+                    rgba(41, 35, 63, 0) 65%);
+
+            opacity: 0;
+
+            transition: .35s ease;
+
+            pointer-events: none;
+        }
+
+
+        .gallery-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(118, 85, 232, .45);
+
+            box-shadow:
+                0 18px 40px rgba(118, 85, 232, .14);
+        }
+
+
+        .gallery-card:hover img {
+
+            transform: scale(1.04);
+        }
+
+
+        .gallery-card:hover::after {
+
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           IMAGE OVERLAY
+        ===================================================== */
+
+        .gallery-overlay {
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            z-index: 2;
+
+            padding: 25px 20px 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #fff;
+
+            opacity: 0;
+
+            transform: translateY(15px);
+
+            transition: .35s ease;
+
+            pointer-events: none;
+        }
+
+
+        .gallery-card:hover .gallery-overlay {
+
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        .gallery-overlay i {
+
+            width: 40px;
+
+            height: 40px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            box-shadow:
+                0 5px 18px rgba(118, 85, 232, .35);
+        }
+
+
+        .gallery-overlay span {
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           IMAGE MODAL
+        ===================================================== */
+
+        #imageModal .modal-dialog {
+
+            max-width: 1100px;
+        }
+
+
+        #imageModal .modal-content {
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 70px rgba(41, 35, 63, .20);
+        }
+
+
+        #imageModal .modal-header {
+
+            padding: 12px 18px;
+
+            border: none;
+        }
+
+
+        #imageModal .modal-body {
+
+            padding: 0 25px 25px;
+
+            min-height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(135deg,
+                    #ffffff,
+                    var(--light-lavender));
+        }
+
+
+        #largeImage {
+
+            max-width: 100%;
+
+            max-height: 78vh;
+
+            width: auto;
+
+            height: auto;
+
+            object-fit: contain;
+
+            margin: auto;
+
+            border-radius: 12px;
+        }
+
+
+        /* =====================================================
+           MODAL CLOSE BUTTON
+        ===================================================== */
+
+        #imageModal .btn-close {
+
+            filter: none;
+
+            opacity: .7;
+        }
+
+
+        #imageModal .btn-close:hover {
+
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           MODAL NAVIGATION
+        ===================================================== */
+
+        .gallery-modal-btn {
+
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            z-index: 10;
+
+            width: 48px;
+
+            height: 48px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            box-shadow:
+                0 8px 20px rgba(118, 85, 232, .25);
+
+            transition: .3s ease;
+        }
+
+
+        .gallery-modal-btn:hover {
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--pink),
+                    var(--peach));
+
+            transform:
+                translateY(-50%) scale(1.08);
+        }
+
+
+        .gallery-prev {
+
+            left: 15px;
+        }
+
+
+        .gallery-next {
+
+            right: 15px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-section {
+
+            margin: 0 24px 100px;
+
+            border-radius: 32px;
+
+            background:
+
+                linear-gradient(120deg,
+                    var(--light-lavender),
+                    var(--light-pink));
+
+            border: 1px solid var(--border);
+
+            padding: 70px 40px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 45px rgba(118, 85, 232, .08);
+        }
+
+
+        .cta-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(circle at 20% 30%,
+                    rgba(118, 85, 232, .13),
+                    transparent 45%),
+
+                radial-gradient(circle at 80% 70%,
+                    rgba(220, 85, 165, .12),
+                    transparent 45%);
+        }
+
+
+        .cta-section>* {
+
+            position: relative;
+        }
+
+
+        .cta-section>i {
+
+            font-size: 28px;
+
+            color: var(--peach);
+
+            margin-bottom: 14px;
+        }
+
+
+        .cta-section h2 {
+
+            font-size: clamp(28px,
+                    4vw,
+                    40px);
+
+            color: var(--text);
+        }
+
+
+        .cta-section p {
+
+            color: var(--text-dim);
+
+            margin-bottom: 26px;
+        }
+
+
+        /* =====================================================
+           CTA BUTTON
+        ===================================================== */
+
+        .cta-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 12px 24px;
+
+            border-radius: 999px;
+
+            font-weight: 700;
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transition: .3s ease;
+
+            box-shadow:
+                0 8px 22px var(--violet-glow);
+        }
+
+
+        .cta-btn:hover {
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 14px 32px var(--pink-glow);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 60px 0 20px;
+
+            color: var(--text-dim);
+
+            background:
+                #f8f5ff;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .footer-brand img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 0 8px rgba(118, 85, 232, .25));
+        }
+
+
+        .footer-brand h3 {
+
+            margin: 0;
+
+            color: var(--text);
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        .footer-brand span {
+
+            color: var(--violet);
+
+            font-weight: 700;
+
+            font-size: 13px;
+        }
+
+
+        .footer-description {
+
+            max-width: 440px;
+
+            margin-top: 20px;
+
+            color: var(--text-dim);
+
+            line-height: 1.8;
+        }
+
+
+        footer h5 {
+
+            color: var(--text);
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        footer .col-lg-3 a {
+
+            display: block;
+
+            color: var(--text-dim);
+
+            margin-bottom: 11px;
+
+            transition: .3s;
+        }
+
+
+        footer .col-lg-3 a:hover {
+
+            color: var(--pink);
+
+            transform: translateX(5px);
+        }
+
+
+        footer .col-lg-4 p {
+
+            color: var(--text-dim);
+
+            margin-bottom: 9px;
+        }
+
+
+        footer .col-lg-4 p i {
+
+            display: inline-block;
+
+            width: 20px;
+
+            color: var(--violet);
+        }
+
+
+        footer hr {
+
+            margin-top: 45px;
+
+            border-color:
+                rgba(41, 35, 63, 0.10);
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .footer-bottom p {
+
+            margin: 0;
+
+            color: #8b849d;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           SOCIAL ICONS
+        ===================================================== */
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        .social-icons a {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: var(--text);
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            transition: .3s;
+        }
+
+
+        .social-icons a:hover {
+
+            color: #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform: translateY(-5px);
+
+            border-color: transparent;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+
+                min-height: 82px;
+            }
+
+
+            .logo-img {
+
+                width: 65px;
+
+                height: 65px;
+            }
+
+
+            .navbar-brand h3 {
+
+                font-size: 24px;
+            }
+
+
+            .navbar-brand small {
+
+                font-size: 13px;
+            }
+
+
+            .navbar-nav {
+
+                padding-top: 15px;
+
+                gap: 0;
+
+                background:
+                    rgba(255, 253, 251, .98);
+
+                border-radius:
+                    0 0 16px 16px;
+
+                box-shadow:
+                    0 12px 25px rgba(41, 35, 63, .06);
+            }
+
+
+            .navbar-nav .nav-link {
+
+                padding: 12px 15px !important;
+            }
+
+
+            .navbar-nav .nav-link::after {
+
+                left: 15px;
+
+                transform: none;
+
+                bottom: 5px;
+            }
+
+
+            .navbar-nav .nav-link:hover::after,
+            .navbar-nav .nav-link.active::after {
+
+                width: 50px;
+            }
+
+
+            .navbar .btn-glow {
+
+                margin:
+                    10px 15px 15px;
+
+                display: inline-flex;
+            }
+
+
+            .gallery-img {
+
+                height: 280px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 640px) {
+
+            .intro {
+
+                padding:
+                    90px 0 40px;
+            }
+
+
+            .gallery-category {
+
+                margin-bottom: 70px;
+            }
+
+
+            .category-heading {
+
+                margin-bottom: 25px;
+            }
+
+
+            /* Image remains uncropped */
+
+            .gallery-img {
+
+                height: 250px;
+
+                object-fit: contain;
+            }
+
+
+            .gallery-card::after {
+
+                opacity: 1;
+            }
+
+
+            .gallery-overlay {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+                padding:
+                    20px 15px 15px;
+            }
+
+
+            .gallery-overlay i {
+
+                width: 36px;
+
+                height: 36px;
+
+                font-size: 14px;
+            }
+
+
+            .gallery-overlay span {
+
+                font-size: 13px;
+            }
+
+
+            .cta-section {
+
+                margin-left: 15px;
+
+                margin-right: 15px;
+
+                padding:
+                    55px 25px;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            /* Mobile modal */
+
+            #imageModal .modal-body {
+
+                padding:
+                    0 10px 15px;
+            }
+
+
+            #largeImage {
+
+                max-height: 72vh;
+
+                width: 100%;
+
+                object-fit: contain;
+            }
+
+
+            .gallery-modal-btn {
+
+                width: 42px;
+
+                height: 42px;
+
+                font-size: 14px;
+            }
+
+
+            .gallery-prev {
+
+                left: 8px;
+            }
+
+
+            .gallery-next {
+
+                right: 8px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-3">
+
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+
+                <div class="ms-2">
+
+                    <h3 class="m-0 fw-bold">
+                        KIRAN
+                    </h3>
+
+                    <small class="fw-bold">
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="center.html">
+                            Center
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="Parents review.html">
+                            Reviews
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="gallery.html">
+                            Gallery
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="contact.html" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <span class="eyebrow">
+                OUR GALLERY
+            </span>
+
+
+            <h2>
+
+                Moments From Our
+
+                <span class="split">
+                    Academy
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Explore our achievements, student activities,
+                events, classroom moments and memorable
+                moments from Kiran Midbrain Academy.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CATEGORY GALLERY
+    ===================================================== -->
+
+    <section class="gallery-categories">
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 ACHIEVEMENTS
+            ================================================= -->
+
+            <div class="gallery-category">
+
+                <div class="category-heading">
+
+                    <span class="eyebrow">
+                        OUR ACHIEVEMENTS
+                    </span>
+
+
+                    <h2>
+
+                        Achievements &
+
+                        <span class="split">
+                            Success
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Celebrating the achievements and
+                        success of our talented students.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- 1 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student1 (2).jpeg" class="gallery-img" alt="Student Achievement"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-trophy"></i>
+
+                                <span>
+                                    Achievement
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student2.jpeg" class="gallery-img" alt="Student Achievement"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-medal"></i>
+
+                                <span>
+                                    Student Success
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student3.jpeg" class="gallery-img" alt="Student Achievement"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <span>
+                                    Success Moment
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student4.jpeg" class="gallery-img" alt="Student Achievement"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-award"></i>
+
+                                <span>
+                                    Award
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student5.jpeg" class="gallery-img" alt="Student Success" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-crown"></i>
+
+                                <span>
+                                    Student Success
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/student6.jpeg" class="gallery-img" alt="Student Achievement"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                <span>
+                                    Special Achievement
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STUDENT ACTIVITIES
+            ================================================= -->
+
+            <div class="gallery-category">
+
+                <div class="category-heading">
+
+                    <span class="eyebrow">
+                        STUDENT ACTIVITIES
+                    </span>
+
+
+                    <h2>
+
+                        Learning &
+
+                        <span class="split">
+                            Activities
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Glimpses of students learning,
+                        practicing and enjoying different
+                        activities.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- 1 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity1.jpg" class="gallery-img" alt="Student Activity" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-brain"></i>
+
+                                <span>
+                                    Brain Activity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity2.jpg" class="gallery-img" alt="Student Learning Activity"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                <span>
+                                    Learning Activity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity3.jpg" class="gallery-img" alt="Students Group Activity"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                <span>
+                                    Group Activity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity4.jpg" class="gallery-img" alt="Student Activity" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-puzzle-piece"></i>
+
+                                <span>
+                                    Creative Activity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity5.jpg" class="gallery-img" alt="Student Practice" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                                <span>
+                                    Practice Session
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/activity6.jpg" class="gallery-img" alt="Student Training" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-person-chalkboard"></i>
+
+                                <span>
+                                    Training Session
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 EVENTS
+            ================================================= -->
+
+            <div class="gallery-category">
+
+                <div class="category-heading">
+
+                    <span class="eyebrow">
+                        EVENTS & CELEBRATIONS
+                    </span>
+
+
+                    <h2>
+
+                        Special
+
+                        <span class="split">
+                            Moments
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Memories from celebrations,
+                        events and special occasions
+                        at our academy.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- 1 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event1.jpg" class="gallery-img" alt="Academy Event" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                                <span>
+                                    Academy Event
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event2.jpg" class="gallery-img" alt="Academy Celebration" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-gift"></i>
+
+                                <span>
+                                    Celebration
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event3.jpg" class="gallery-img" alt="Students Event" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-face-smile"></i>
+
+                                <span>
+                                    Special Moment
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event4.jpg" class="gallery-img" alt="Academy Celebration" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-party-horn"></i>
+
+                                <span>
+                                    Celebration
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event5.jpg" class="gallery-img" alt="Academy Function" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                                <span>
+                                    Special Event
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/event6.jpg" class="gallery-img" alt="Students Celebration" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                                <span>
+                                    Happy Moment
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CLASSROOM
+            ================================================= -->
+
+            <div class="gallery-category">
+
+                <div class="category-heading">
+
+                    <span class="eyebrow">
+                        OUR ACADEMY
+                    </span>
+
+
+                    <h2>
+
+                        Classroom &
+
+                        <span class="split">
+                            Learning Space
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Take a look at our academy environment
+                        and learning spaces.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- 1 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom1.jpg" class="gallery-img" alt="Kiran Midbrain Academy Classroom"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-school"></i>
+
+                                <span>
+                                    Classroom
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom2.jpg" class="gallery-img"
+                                alt="Kiran Midbrain Academy Learning Space" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-chalkboard-user"></i>
+
+                                <span>
+                                    Learning Space
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom3.jpg" class="gallery-img" alt="Academy Classroom" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                                <span>
+                                    Academy
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom4.jpg" class="gallery-img" alt="Academy Training Room"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-chalkboard"></i>
+
+                                <span>
+                                    Training Room
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom5.jpg" class="gallery-img" alt="Students Classroom"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                <span>
+                                    Student Class
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/classroom6.jpg" class="gallery-img" alt="Academy Environment"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-building"></i>
+
+                                <span>
+                                    Academy Environment
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PARENTS & STUDENTS
+            ================================================= -->
+
+            <div class="gallery-category">
+
+                <div class="category-heading">
+
+                    <span class="eyebrow">
+                        OUR COMMUNITY
+                    </span>
+
+
+                    <h2>
+
+                        Parents &
+
+                        <span class="split">
+                            Students
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+                        Beautiful moments shared by our
+                        students, parents and academy team.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- 1 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents1.jpg" class="gallery-img" alt="Parents and Students"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                                <span>
+                                    Happy Moments
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents2.jpg" class="gallery-img" alt="Parents at Academy" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-people-group"></i>
+
+                                <span>
+                                    Our Community
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents3.jpg" class="gallery-img" alt="Students and Parents"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-handshake"></i>
+
+                                <span>
+                                    Together We Grow
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents4.jpg" class="gallery-img" alt="Parents Meeting" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <span>
+                                    Parents Meeting
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents5.jpg" class="gallery-img" alt="Students and Parents"
+                                loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-children"></i>
+
+                                <span>
+                                    Our Students
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="gallery-card">
+
+                            <img src="images/parents6.jpg" class="gallery-img" alt="Academy Community" loading="lazy">
+
+                            <div class="gallery-overlay">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                <span>
+                                    Academy Community
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section>
+
+        <div class="cta-section">
+
+            <i class="fa-solid fa-camera"></i>
+
+
+            <h2>
+                Visit Kiran Midbrain Academy
+            </h2>
+
+
+            <p>
+                See our learning environment
+                and activities in person.
+            </p>
+
+
+            <a href="contact.html" class="cta-btn">
+
+                Contact Us
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-5">
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential of every child
+                        through specialized training programs designed
+                        to improve focus, memory, creativity and
+                        confidence.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+
+                    <a href="program.html">
+                        Programs
+                    </a>
+
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- LOCATIONS -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Besa
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Dighori
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Warora
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chandrapur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chimur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Ghughu &amp; Umred
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+
+                <p>
+
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <div class="social-icons">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/911234567890" target="_blank" aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         IMAGE MODAL
+    ===================================================== -->
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+            <div class="modal-content">
+
+
+                <!-- HEADER -->
+
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+
+
+                <!-- BODY -->
+
+                <div class="modal-body">
+
+
+                    <!-- PREVIOUS -->
+
+                    <button type="button" class="gallery-modal-btn gallery-prev" id="prevImage"
+                        aria-label="Previous image">
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <!-- IMAGE -->
+
+                    <img id="largeImage" class="img-fluid" alt="Gallery Preview">
+
+
+                    <!-- NEXT -->
+
+                    <button type="button" class="gallery-modal-btn gallery-next" id="nextImage" aria-label="Next image">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =====================================================
+         GALLERY JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* =================================================
+               GET ALL GALLERY IMAGES
+            ================================================= */
+
+            const galleryImages =
+                Array.from(
+                    document.querySelectorAll(".gallery-img")
+                );
+
+
+            const imageModalElement =
+                document.getElementById("imageModal");
+
+
+            const largeImage =
+                document.getElementById("largeImage");
+
+
+            const prevButton =
+                document.getElementById("prevImage");
+
+
+            const nextButton =
+                document.getElementById("nextImage");
+
+
+            let currentIndex = 0;
+
+
+            /* =================================================
+               BOOTSTRAP MODAL
+            ================================================= */
+
+            const imageModal =
+                new bootstrap.Modal(
+                    imageModalElement
+                );
+
+
+            /* =================================================
+               OPEN IMAGE
+            ================================================= */
+
+            function openImage(index) {
+
+                if (
+                    index < 0 ||
+                    index >= galleryImages.length
+                ) {
+
+                    return;
+
+                }
+
+
+                currentIndex = index;
+
+
+                const image =
+                    galleryImages[currentIndex];
+
+
+                largeImage.src =
+                    image.src;
+
+
+                largeImage.alt =
+                    image.alt ||
+                    "Gallery Preview";
+
+
+                imageModal.show();
+
+            }
+
+
+            /* =================================================
+               NEXT IMAGE
+            ================================================= */
+
+            function showNextImage() {
+
+                currentIndex++;
+
+
+                if (
+                    currentIndex >=
+                    galleryImages.length
+                ) {
+
+                    currentIndex = 0;
+
+                }
+
+
+                const image =
+                    galleryImages[currentIndex];
+
+
+                largeImage.src =
+                    image.src;
+
+
+                largeImage.alt =
+                    image.alt ||
+                    "Gallery Preview";
+
+            }
+
+
+            /* =================================================
+               PREVIOUS IMAGE
+            ================================================= */
+
+            function showPreviousImage() {
+
+                currentIndex--;
+
+
+                if (currentIndex < 0) {
+
+                    currentIndex =
+                        galleryImages.length - 1;
+
+                }
+
+
+                const image =
+                    galleryImages[currentIndex];
+
+
+                largeImage.src =
+                    image.src;
+
+
+                largeImage.alt =
+                    image.alt ||
+                    "Gallery Preview";
+
+            }
+
+
+            /* =================================================
+               IMAGE CLICK
+            ================================================= */
+
+            galleryImages.forEach(
+                function (img, index) {
+
+                    img.addEventListener(
+                        "click",
+                        function () {
+
+                            openImage(index);
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* =================================================
+               NEXT BUTTON
+            ================================================= */
+
+            nextButton.addEventListener(
+                "click",
+                function () {
+
+                    showNextImage();
+
+                }
+            );
+
+
+            /* =================================================
+               PREVIOUS BUTTON
+            ================================================= */
+
+            prevButton.addEventListener(
+                "click",
+                function () {
+
+                    showPreviousImage();
+
+                }
+            );
+
+
+            /* =================================================
+               KEYBOARD CONTROLS
+            ================================================= */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        !imageModalElement.classList.contains("show")
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key === "ArrowRight"
+                    ) {
+
+                        showNextImage();
+
+                    }
+
+
+                    if (
+                        event.key === "ArrowLeft"
+                    ) {
+
+                        showPreviousImage();
+
+                    }
+
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        imageModal.hide();
+
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               MOBILE MENU CLOSE
+            ================================================= */
+
+            const menu =
+                document.getElementById("menu");
+
+
+            document
+                .querySelectorAll(
+                    "#menu .nav-link"
+                )
+                .forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                const bsCollapse =
+                                    bootstrap.Collapse
+                                        .getInstance(menu);
+
+
+                                if (bsCollapse) {
+
+                                    bsCollapse.hide();
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

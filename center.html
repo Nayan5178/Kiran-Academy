@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    ```
+    <title>Our Centers | Kiran Midbrain Academy</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <style>
+        /* =====================================================
+       ROOT COLORS - LIGHT COLOR THEME
+    ===================================================== */
+
+        :root {
+
+            --bg: #fffaf5;
+
+            --surface: #ffffff;
+
+            --surface-2: #fff7ef;
+
+            --surface-3: #f5f0ff;
+
+            --border: rgba(139, 92, 246, 0.18);
+
+            --line: rgba(40, 30, 70, 0.08);
+
+            --text: #292342;
+
+            --text-dim: #706b82;
+
+            --muted: #777185;
+
+            --violet: #7654e8;
+
+            --violet-light: #9b82f2;
+
+            --pink: #f15f9b;
+
+            --pink-light: #ff8fba;
+
+            --amber: #f4a62a;
+
+            --amber-light: #ffc85c;
+
+            --amber-glow: rgba(244, 166, 42, 0.25);
+
+            --logic: #5472df;
+
+            --logic-soft: rgba(84, 114, 223, 0.10);
+
+            --creative: #ef9b35;
+
+            --creative-soft: rgba(239, 155, 53, 0.12);
+
+            --mint: #18b995;
+
+            --shadow:
+                0 18px 45px rgba(65, 47, 105, 0.09);
+
+            --shadow-hover:
+                0 24px 55px rgba(65, 47, 105, 0.14);
+        }
+
+
+        /* =====================================================
+       GLOBAL
+    ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            margin: 0;
+
+            background:
+                radial-gradient(circle at 10% 10%,
+                    rgba(118, 84, 232, .05),
+                    transparent 28%),
+
+                radial-gradient(circle at 90% 40%,
+                    rgba(241, 95, 155, .05),
+                    transparent 30%),
+
+                var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family:
+                'Fraunces',
+                serif;
+
+            font-weight: 600;
+
+            line-height: 1.12;
+
+            margin: 0 0 .5em;
+        }
+
+
+        /* =====================================================
+       EYEBROW
+    ===================================================== */
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            color: var(--amber);
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 28px;
+
+            height: 3px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+        }
+
+
+        .split {
+
+            display: inline-block;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--amber));
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            color: transparent;
+        }
+
+
+        /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+        .navbar {
+
+            padding: 10px 0;
+
+            min-height: 90px;
+
+            background:
+                rgba(255, 250, 245, .94) !important;
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom:
+                1px solid var(--border);
+
+            z-index: 9999;
+        }
+
+
+        .navbar-brand {
+
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+        }
+
+
+        .logo-img {
+
+            width: 80px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(0 5px 12px rgba(118, 84, 232, .18));
+        }
+
+
+        .navbar-brand h3 {
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color: var(--text) !important;
+        }
+
+
+        .navbar-brand small {
+
+            display: block;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size: 16px;
+
+            color: var(--amber) !important;
+
+            letter-spacing: .5px;
+        }
+
+
+        .navbar-nav {
+            gap: 6px;
+        }
+
+
+        .navbar-nav .nav-link {
+
+            position: relative;
+
+            color: var(--text-dim) !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding: 10px 14px !important;
+
+            transition:
+                color .3s ease,
+                transform .3s ease;
+        }
+
+
+        .navbar-nav .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 2px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateX(-50%);
+
+            transition:
+                width .35s ease;
+        }
+
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+
+            color:
+                var(--text) !important;
+        }
+
+
+        .navbar-nav .nav-link:hover {
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+
+            width: 70%;
+        }
+
+
+        /* =====================================================
+       NAV BUTTON
+    ===================================================== */
+
+        .btn-glow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            padding: 12px 25px;
+
+            font-weight: 700;
+
+            color: #fff !important;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+                0 10px 25px rgba(118, 84, 232, .22);
+
+            transition: .3s ease;
+        }
+
+
+        .btn-glow:hover {
+
+            transform:
+                translateY(-3px) scale(1.03);
+
+            box-shadow:
+                0 15px 32px rgba(241, 95, 155, .28);
+
+            color: #fff !important;
+        }
+
+
+        /* =====================================================
+       TOGGLER
+    ===================================================== */
+
+        .navbar-toggler {
+
+            border:
+                1px solid var(--border);
+
+            padding:
+                8px 10px;
+
+            background:
+                rgba(118, 84, 232, .06);
+        }
+
+
+        .navbar-toggler:focus {
+
+            box-shadow:
+                0 0 0 3px rgba(118, 84, 232, .12);
+        }
+
+
+        .navbar-toggler-icon {
+
+            filter:
+                brightness(0) saturate(100%) invert(30%) sepia(20%) saturate(1500%) hue-rotate(220deg);
+        }
+
+
+        /* =====================================================
+       PAGE HEADER
+    ===================================================== */
+
+        .page-head {
+
+            padding:
+                95px 0 70px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(180deg,
+                    #fffaf5,
+                    #ffffff);
+        }
+
+
+        .page-head::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset:
+                -100px -10% auto;
+
+            height: 450px;
+
+            background:
+
+                radial-gradient(ellipse 500px 300px at 20% 25%,
+                    rgba(84, 114, 223, .10),
+                    transparent 65%),
+
+                radial-gradient(ellipse 500px 300px at 80% 15%,
+                    rgba(239, 155, 53, .12),
+                    transparent 65%),
+
+                radial-gradient(ellipse 400px 250px at 50% 80%,
+                    rgba(241, 95, 155, .07),
+                    transparent 65%);
+
+            pointer-events: none;
+        }
+
+
+        .page-head h1 {
+
+            position: relative;
+
+            font-size:
+                clamp(36px, 5vw, 54px);
+
+            margin-top: 14px;
+
+            color:
+                var(--text);
+        }
+
+
+        .page-head p {
+
+            position: relative;
+
+            max-width: 650px;
+
+            margin:
+                0 auto;
+
+            color:
+                var(--text-dim);
+
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+       CENTER SECTION
+    ===================================================== */
+
+        section.body-section {
+
+            padding:
+                20px 0 110px;
+
+            position: relative;
+        }
+
+
+        #centers {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 24px;
+        }
+
+
+        /* =====================================================
+       CENTER CARD
+    ===================================================== */
+
+        .center-card {
+
+            background:
+                rgba(255, 255, 255, .92);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding:
+                34px 30px;
+
+            cursor: pointer;
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(65, 47, 105, .045);
+        }
+
+
+        .center-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 160px;
+
+            height: 160px;
+
+            top: -100px;
+
+            right: -70px;
+
+            border-radius: 50%;
+
+            background:
+                var(--violet);
+
+            filter:
+                blur(60px);
+
+            opacity: .07;
+        }
+
+
+        .center-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            height: 4px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--violet),
+                    var(--pink),
+                    var(--amber));
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform .35s ease;
+        }
+
+
+        .center-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(118, 84, 232, .30);
+
+            box-shadow:
+                var(--shadow-hover);
+        }
+
+
+        .center-card:hover::after {
+
+            transform:
+                scaleX(1);
+        }
+
+
+        /* =====================================================
+       LOCATION PIN
+    ===================================================== */
+
+        .pin {
+
+            width: 56px;
+
+            height: 56px;
+
+            border-radius: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 21px;
+
+            margin-bottom: 20px;
+
+            background:
+                var(--creative-soft);
+
+            color:
+                var(--creative);
+
+            transition:
+                .3s ease;
+
+            box-shadow:
+                0 8px 20px rgba(239, 155, 53, .08);
+        }
+
+
+        .center-card:hover .pin {
+
+            transform:
+                scale(1.08) rotate(-5deg);
+        }
+
+
+        .center-card:nth-child(3n+2) .pin {
+
+            background:
+                var(--logic-soft);
+
+            color:
+                var(--logic);
+        }
+
+
+        .center-card:nth-child(3n) .pin {
+
+            background:
+                rgba(241, 95, 155, .10);
+
+            color:
+                var(--pink);
+        }
+
+
+        .center-card h4 {
+
+            font-family:
+                'Fraunces',
+                serif;
+
+            font-size: 23px;
+
+            margin-bottom: 5px;
+
+            color:
+                var(--text);
+        }
+
+
+        .center-card p {
+
+            color:
+                var(--text-dim);
+
+            margin-bottom: 15px;
+        }
+
+
+        .view-link {
+
+            color:
+                var(--creative);
+
+            font-weight: 700;
+
+            font-size: 14px;
+        }
+
+
+        .center-card:nth-child(3n+2) .view-link {
+
+            color:
+                var(--logic);
+        }
+
+
+        .center-card:nth-child(3n) .view-link {
+
+            color:
+                var(--pink);
+        }
+
+
+        /* =====================================================
+       DETAIL VIEW
+    ===================================================== */
+
+        #details {
+
+            max-width:
+                760px;
+
+            margin:
+                0 auto;
+        }
+
+
+        .detail-card {
+
+            background:
+                rgba(255, 255, 255, .97);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                28px;
+
+            padding:
+                65px 48px 48px;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            box-shadow:
+                var(--shadow);
+
+            overflow:
+                hidden;
+        }
+
+
+        .detail-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 280px;
+
+            height: 280px;
+
+            top: -170px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(118, 84, 232, .08);
+
+            filter:
+                blur(50px);
+        }
+
+
+        .back-link {
+
+            position:
+                absolute;
+
+            top:
+                24px;
+
+            left:
+                25px;
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
+            color:
+                var(--text-dim);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            background:
+                rgba(118, 84, 232, .06);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                50px;
+
+            padding:
+                8px 14px;
+
+            cursor:
+                pointer;
+
+            font-family:
+                'Plus Jakarta Sans',
+                sans-serif;
+
+            transition:
+                .3s;
+        }
+
+
+        .back-link:hover {
+
+            color:
+                var(--violet);
+
+            background:
+                rgba(118, 84, 232, .10);
+
+            transform:
+                translateX(-2px);
+        }
+
+
+        .detail-pin {
+
+            width:
+                76px;
+
+            height:
+                76px;
+
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                27px;
+
+            margin:
+                0 auto 22px;
+
+            background:
+                linear-gradient(135deg,
+                    rgba(118, 84, 232, .11),
+                    rgba(241, 95, 155, .12));
+
+            color:
+                var(--pink);
+
+            box-shadow:
+                0 12px 30px rgba(118, 84, 232, .10);
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+
+        #name {
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                5px;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+
+        #state {
+
+            color:
+                var(--text-dim);
+
+            font-size:
+                16px;
+
+            margin-bottom:
+                28px;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+        }
+
+
+        /* =====================================================
+       DETAIL GRID
+    ===================================================== */
+
+        .detail-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                14px;
+
+            text-align:
+                left;
+
+            margin-bottom:
+                16px;
+        }
+
+
+        .detail-box {
+
+            background:
+                var(--surface-2);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            padding:
+                17px 18px;
+
+            transition:
+                .3s;
+        }
+
+
+        .detail-box:hover {
+
+            border-color:
+                rgba(118, 84, 232, .28);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .detail-box small {
+
+            color:
+                var(--text-dim);
+
+            font-size:
+                11.5px;
+
+            letter-spacing:
+                .08em;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .detail-box strong {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            font-size:
+                15.5px;
+
+            margin-top:
+                4px;
+        }
+
+
+        /* =====================================================
+       ADDRESS
+    ===================================================== */
+
+        .address-box {
+
+            background:
+                linear-gradient(135deg,
+                    rgba(118, 84, 232, .06),
+                    rgba(241, 95, 155, .05));
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            padding:
+                19px 20px;
+
+            margin:
+                18px 0 28px;
+
+            text-align:
+                left;
+
+            color:
+                var(--text-dim);
+        }
+
+
+        .address-box strong {
+
+            display:
+                block;
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                4px;
+        }
+
+
+        /* =====================================================
+       DETAIL BUTTONS
+    ===================================================== */
+
+        .detail-cta {
+
+            display:
+                flex;
+
+            gap:
+                12px;
+
+            justify-content:
+                center;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .btn-primary {
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            border:
+                none;
+
+            color:
+                #fff !important;
+
+            padding:
+                12px 24px;
+
+            border-radius:
+                50px;
+
+            font-weight:
+                700;
+
+            box-shadow:
+                0 10px 25px rgba(118, 84, 232, .20);
+
+            transition:
+                .3s;
+        }
+
+
+        .btn-primary:hover {
+
+            color:
+                #fff !important;
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 32px rgba(241, 95, 155, .25);
+        }
+
+
+        .btn-ghost {
+
+            border:
+                1px solid var(--border);
+
+            color:
+                var(--text);
+
+            background:
+                #fff;
+
+            padding:
+                12px 24px;
+
+            border-radius:
+                50px;
+
+            font-weight:
+                700;
+
+            transition:
+                .3s;
+        }
+
+
+        .btn-ghost:hover {
+
+            color:
+                var(--violet);
+
+            background:
+                var(--surface-3);
+
+            border-color:
+                var(--violet);
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        .d-none {
+            display:
+                none !important;
+        }
+
+
+        /* =====================================================
+       FOOTER
+    ===================================================== */
+
+        footer {
+
+            padding:
+                65px 0 20px;
+
+            color:
+                var(--text-dim);
+
+            background:
+                #f4efff;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1.2fr;
+
+            gap:
+                50px;
+        }
+
+
+        .footer-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+        }
+
+
+        .footer-brand img {
+
+            width:
+                65px;
+
+            height:
+                65px;
+
+            object-fit:
+                contain;
+
+            filter:
+                drop-shadow(0 5px 10px rgba(118, 84, 232, .15));
+        }
+
+
+        .footer-brand h3 {
+
+            margin:
+                0;
+
+            color:
+                var(--text);
+
+            font-size:
+                26px;
+
+            font-weight:
+                800;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+        }
+
+
+        .footer-brand span {
+
+            color:
+                var(--amber);
+
+            font-weight:
+                700;
+
+            font-size:
+                13px;
+        }
+
+
+        .footer-description,
+        .footer-desc {
+
+            max-width:
+                440px;
+
+            margin-top:
+                20px;
+
+            color:
+                var(--text-dim);
+
+            line-height:
+                1.8;
+        }
+
+
+        footer h5 {
+
+            color:
+                var(--text);
+
+            margin-bottom:
+                20px;
+
+            font-weight:
+                700;
+
+            font-family:
+                'Baloo 2',
+                sans-serif;
+
+            font-size:
+                20px;
+        }
+
+
+        .footer-links a {
+
+            display:
+                block;
+
+            color:
+                var(--text-dim);
+
+            margin-bottom:
+                11px;
+
+            transition:
+                .3s;
+        }
+
+
+        .footer-links a:hover {
+
+            color:
+                var(--mint);
+
+            transform:
+                translateX(5px);
+        }
+
+
+        .footer-loc p {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+
+            color:
+                var(--text-dim);
+
+            margin-bottom:
+                9px;
+        }
+
+
+        .footer-loc p i {
+
+            width:
+                20px;
+
+            color:
+                var(--violet);
+
+            margin-top:
+                5px;
+        }
+
+
+        footer hr {
+
+            margin-top:
+                45px;
+
+            border-color:
+                rgba(40, 30, 70, .10);
+        }
+
+
+        .footer-bottom {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .footer-bottom p {
+
+            margin:
+                0;
+
+            color:
+                #817b95;
+
+            font-size:
+                13px;
+        }
+
+
+        /* =====================================================
+       SOCIAL ICONS
+    ===================================================== */
+
+        .social-icons {
+
+            display:
+                flex;
+
+            gap:
+                10px;
+        }
+
+
+        .social-icons a {
+
+            width:
+                40px;
+
+            height:
+                40px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            color:
+                var(--text);
+
+            background:
+                #fff;
+
+            border:
+                1px solid var(--border);
+
+            transition:
+                .3s;
+        }
+
+
+        .social-icons a:hover {
+
+            color:
+                #fff;
+
+            background:
+                linear-gradient(135deg,
+                    var(--violet),
+                    var(--pink));
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(118, 84, 232, .18);
+        }
+
+
+        /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+
+                min-height:
+                    75px;
+            }
+
+
+            .logo-img {
+
+                width:
+                    65px;
+
+                height:
+                    65px;
+            }
+
+
+            .navbar-brand h3 {
+
+                font-size:
+                    24px;
+            }
+
+
+            .navbar-brand small {
+
+                font-size:
+                    12px;
+            }
+
+
+            .navbar-collapse {
+
+                margin-top:
+                    15px;
+
+                padding:
+                    15px;
+
+                background:
+                    #fff;
+
+                border:
+                    1px solid var(--border);
+
+                border-radius:
+                    16px;
+
+                box-shadow:
+                    0 20px 40px rgba(65, 47, 105, .12);
+            }
+
+
+            .navbar-nav {
+
+                gap:
+                    2px;
+            }
+
+
+            .navbar-nav .nav-link {
+
+                padding:
+                    11px 14px !important;
+            }
+
+
+            .navbar .btn-glow {
+
+                display:
+                    inline-flex;
+
+                margin-top:
+                    10px;
+            }
+
+
+            #centers {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    36px;
+            }
+        }
+
+
+        @media (max-width: 767px) {
+
+            .page-head {
+
+                padding:
+                    70px 0 50px;
+            }
+
+
+            section.body-section {
+
+                padding:
+                    10px 0 80px;
+            }
+
+
+            #centers {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .center-card {
+
+                padding:
+                    30px 26px;
+            }
+
+
+            .detail-card {
+
+                padding:
+                    75px 22px 38px;
+            }
+
+
+            .detail-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .back-link {
+
+                left:
+                    18px;
+
+                top:
+                    18px;
+            }
+
+
+            footer {
+
+                padding:
+                    50px 0 20px;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+
+                justify-content:
+                    center;
+            }
+
+
+            .social-icons {
+
+                justify-content:
+                    center;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo-img {
+
+                width:
+                    55px;
+
+                height:
+                    55px;
+            }
+
+
+            .navbar-brand h3 {
+
+                font-size:
+                    21px;
+            }
+
+
+            .navbar-brand small {
+
+                font-size:
+                    10px;
+            }
+
+
+            .page-head h1 {
+
+                font-size:
+                    36px;
+            }
+
+
+            .page-head p {
+
+                font-size:
+                    14px;
+
+                padding:
+                    0 12px;
+            }
+
+
+            .detail-card {
+
+                border-radius:
+                    22px;
+            }
+
+
+            .detail-pin {
+
+                width:
+                    68px;
+
+                height:
+                    68px;
+            }
+
+
+            .detail-cta {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .detail-cta a {
+
+                width:
+                    100%;
+
+                text-align:
+                    center;
+            }
+        }
+    </style>
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-3">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+                <div class="ms-2">
+
+                    <h3 class="m-0 fw-bold">
+                        KIRAN
+                    </h3>
+
+                    <small class="fw-bold">
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="center.html">
+                            Center
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Parents review.html">
+                            Reviews
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="contact.html" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+    <div class="page-head">
+
+        <div class="container">
+
+            <span class="eyebrow">
+
+                FIND US NEAR YOU
+
+            </span>
+
+            <h1>
+
+                Our
+
+                <span class="split">
+                    Centers
+                </span>
+
+            </h1>
+
+            <p>
+
+                Choose your nearest center to see timings,
+                contact details and directions.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+     CENTERS
+===================================================== -->
+
+    <div class="container">
+
+        <!-- LIST -->
+
+        <section id="list" class="body-section">
+
+            <div id="centers"></div>
+
+        </section>
+
+
+        <!-- DETAILS -->
+
+        <section id="details" class="body-section d-none">
+
+            <div class="detail-card">
+
+                <button onclick="showCenters()" class="back-link">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    All Centers
+
+                </button>
+
+
+                <div class="detail-pin">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+
+                <h1 id="name"></h1>
+
+                <p id="state"></p>
+
+
+                <div class="detail-grid">
+
+                    <div class="detail-box">
+
+                        <small>
+                            Timing
+                        </small>
+
+                        <strong id="timing"></strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <small>
+                            Type
+                        </small>
+
+                        <strong id="type"></strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <small>
+                            Days
+                        </small>
+
+                        <strong id="days"></strong>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <small>
+                            Contact
+                        </small>
+
+                        <strong id="phone"></strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="address-box">
+
+                    <strong>
+                        Address
+                    </strong>
+
+                    <span id="address"></span>
+
+                </div>
+
+
+                <div class="detail-cta">
+
+                    <a id="map" target="_blank" rel="noopener" class="btn btn-primary">
+
+                        Get Directions
+
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
+
+                    </a>
+
+
+                    <a id="call" class="btn btn-ghost">
+
+                        <i class="fa-solid fa-phone me-1"></i>
+
+                        Call Center
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div>
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential of every child
+                        through specialized training programs designed
+                        to improve focus, memory, creativity and confidence.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            About Us
+                        </a>
+
+                        <a href="program.html">
+                            Programs
+                        </a>
+
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATIONS -->
+
+                <div>
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+                    <div class="footer-loc">
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Nagpur – Besa
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Nagpur – Dighori
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Warora
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chandrapur
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chimur
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Ghughu &amp; Umred
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/911234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =====================================================
+     CENTER DATA + FUNCTIONALITY
+===================================================== -->
+
+    <script>
+
+        const centers = [
+
+            {
+                name: "Nagpur",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Main Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Nagpur, Maharashtra, India"
+            },
+
+            {
+                name: "Wardha",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Wardha, Maharashtra, India"
+            },
+
+            {
+                name: "Chandrapur",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Chandrapur, Maharashtra, India"
+            },
+
+            {
+                name: "Chimur",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Chimur, Maharashtra, India"
+            },
+
+            {
+                name: "Ghughu",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Ghughu, Maharashtra, India"
+            },
+
+            {
+                name: "Umred",
+                state: "Maharashtra",
+                timing: "9 AM – 7 PM",
+                type: "Center",
+                days: "Monday – Saturday",
+                phone: "+91 00000 00000",
+                address: "Umred, Maharashtra, India"
+            }
+
+        ];
+
+
+        /* =====================================================
+           CREATE CENTER CARDS
+        ===================================================== */
+
+        const centersBox =
+            document.querySelector("#centers");
+
+
+        centers.forEach((center, i) => {
+
+            centersBox.innerHTML += `
+
+            <div
+                class="center-card"
+                onclick="showDetails(${i})">
+
+                <div class="pin">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <h4>
+                    ${center.name}
+                </h4>
+
+                <p>
+                    ${center.state}
+                </p>
+
+                <span class="view-link">
+                    View Location
+                    <i class="fa-solid fa-arrow-right ms-1"></i>
+                </span>
+
+            </div>
+
+        `;
+
+        });
+
+
+        /* =====================================================
+           SHOW CENTER DETAILS
+        ===================================================== */
+
+        function showDetails(i) {
+
+            const c = centers[i];
+
+
+            document.querySelector("#name")
+                .textContent = c.name;
+
+
+            document.querySelector("#state")
+                .textContent = c.state;
+
+
+            document.querySelector("#timing")
+                .textContent = c.timing;
+
+
+            document.querySelector("#type")
+                .textContent = c.type;
+
+
+            document.querySelector("#days")
+                .textContent = c.days;
+
+
+            document.querySelector("#phone")
+                .textContent = c.phone;
+
+
+            document.querySelector("#address")
+                .textContent = c.address;
+
+
+            document.querySelector("#call")
+                .href =
+                "tel:" +
+                c.phone.replace(/\s/g, "");
+
+
+            document.querySelector("#map")
+                .href =
+                "https://www.google.com/maps/search/?api=1&query=" +
+                encodeURIComponent(c.address);
+
+
+            document.querySelector("#list")
+                .classList.add("d-none");
+
+
+            document.querySelector("#details")
+                .classList.remove("d-none");
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =====================================================
+           SHOW ALL CENTERS
+        ===================================================== */
+
+        function showCenters() {
+
+            document.querySelector("#details")
+                .classList.add("d-none");
+
+
+            document.querySelector("#list")
+                .classList.remove("d-none");
+
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    </script>
+    ```
+
+</body>
+
+</html>

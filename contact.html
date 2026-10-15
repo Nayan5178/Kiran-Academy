@@ -1,0 +1,3597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Kiran Midbrain Academy</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* =====================================================
+           LIGHT THEME COLORS
+        ===================================================== */
+
+        :root {
+
+            --bg: #fffdfb;
+
+            --surface-solid: #ffffff;
+
+            --surface-2: #f8f5ff;
+
+            --surface: #f5f1ff;
+
+            --surface-pink: #fff1f7;
+
+            --border: rgba(118, 85, 232, .18);
+
+            --line: rgba(41, 35, 63, .10);
+
+            --text: #29233f;
+
+            --text-dim: #625d78;
+
+            --muted: #77718d;
+
+
+            /* MAIN COLORS */
+
+            --purple: #7655e8;
+
+            --purple-dark: #6040d4;
+
+            --purple-light: #9277f0;
+
+            --pink: #dc55a5;
+
+            --pink-light: #ed7fbd;
+
+            --orange: #f5a03c;
+
+            --orange-light: #ffbd67;
+
+            --yellow: #f4b942;
+
+            --blue: #6a73e8;
+
+            --blue-light: #7f88ed;
+
+            --mint: #36bfa2;
+
+            --green: #25b866;
+
+
+            /* OLD VARIABLE COMPATIBILITY */
+
+            --logic: #7655e8;
+
+            --logic-soft: rgba(118, 85, 232, .12);
+
+            --creative: #f5a03c;
+
+            --creative-soft: rgba(245, 160, 60, .13);
+
+            --violet: #7655e8;
+
+            --amber: #f5a03c;
+
+            --amber-glow: rgba(245, 160, 60, .25);
+
+            --pink-glow: rgba(220, 85, 165, .25);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background:
+
+                radial-gradient(circle at 5% 20%,
+                    rgba(118, 85, 232, .10),
+                    transparent 30%),
+
+                radial-gradient(circle at 95% 25%,
+                    rgba(220, 85, 165, .08),
+                    transparent 28%),
+
+                radial-gradient(circle at 85% 75%,
+                    rgba(245, 160, 60, .08),
+                    transparent 30%),
+
+                var(--bg);
+
+            color: var(--text);
+
+            font-family: 'Plus Jakarta Sans', sans-serif;
+
+            line-height: 1.65;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+
+            font-family: 'Fraunces', serif;
+
+            font-weight: 600;
+
+            line-height: 1.15;
+
+            margin: 0 0 .5em;
+
+            letter-spacing: -.01em;
+
+            color: var(--text);
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           GRADIENT TEXT
+        ===================================================== */
+
+        .split {
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange));
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        /* =====================================================
+           EYEBROW
+        ===================================================== */
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            font-size: 12.5px;
+
+            font-weight: 800;
+
+            letter-spacing: .14em;
+
+            text-transform: uppercase;
+
+            color: var(--purple);
+        }
+
+
+        .eyebrow::before {
+
+            content: "";
+
+            width: 28px;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange));
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            padding: 10px 0;
+
+            min-height: 90px;
+
+            background: rgba(255, 255, 255, .94) !important;
+
+            backdrop-filter: blur(18px);
+
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(118, 85, 232, .12);
+
+            box-shadow: 0 5px 25px rgba(75, 50, 120, .05);
+        }
+
+
+        .navbar-brand {
+
+            margin-left: 0 !important;
+
+            padding-left: 0 !important;
+        }
+
+
+        .logo-img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+
+                drop-shadow(0 5px 12px rgba(118, 85, 232, .20));
+        }
+
+
+        .navbar-brand h3 {
+
+            font-size: 28px;
+
+            letter-spacing: 1px;
+
+            color: #29233f !important;
+
+            font-family: 'Baloo 2', sans-serif;
+
+            font-weight: 800;
+        }
+
+
+        .navbar-brand small {
+
+            font-size: 15px;
+
+            color: var(--purple) !important;
+
+            letter-spacing: .5px;
+        }
+
+
+        .navbar-nav {
+
+            gap: 4px;
+        }
+
+
+        .navbar-nav .nav-link {
+
+            position: relative;
+
+            color: #625d78 !important;
+
+            font-weight: 600;
+
+            font-size: 15px;
+
+            padding: 10px 14px !important;
+
+            transition: .3s ease;
+        }
+
+
+        .navbar-nav .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 1px;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--purple),
+                    var(--pink));
+
+            transform: translateX(-50%);
+
+            transition: width .35s ease;
+        }
+
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+
+            color: var(--purple) !important;
+        }
+
+
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+
+            width: 70%;
+        }
+
+
+        /* =====================================================
+           NAVBAR BUTTON
+        ===================================================== */
+
+        .navbar .btn-glow {
+
+            padding: 12px 25px;
+
+            font-weight: 700;
+
+            color: #fff;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+
+            border: none;
+
+            box-shadow:
+
+                0 10px 25px rgba(118, 85, 232, .24);
+
+            transition: .3s ease;
+        }
+
+
+        .navbar .btn-glow:hover {
+
+            transform: translateY(-3px);
+
+            color: #fff;
+
+            box-shadow:
+
+                0 15px 32px rgba(220, 85, 165, .25);
+        }
+
+
+        .navbar-toggler {
+
+            border-color: rgba(118, 85, 232, .25);
+        }
+
+
+        .navbar-toggler:focus {
+
+            box-shadow:
+
+                0 0 0 3px rgba(118, 85, 232, .12);
+        }
+
+
+        .navbar-toggler-icon {
+
+            background-image:
+
+                url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2841,35,63,0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .contact-hero {
+
+            padding: 105px 0 65px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            text-align: center;
+        }
+
+
+        .contact-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(ellipse 600px 420px at 8% 20%,
+                    rgba(118, 85, 232, .14),
+                    transparent 65%),
+
+                radial-gradient(ellipse 600px 420px at 50% 0%,
+                    rgba(220, 85, 165, .09),
+                    transparent 65%),
+
+                radial-gradient(ellipse 600px 420px at 92% 25%,
+                    rgba(245, 160, 60, .12),
+                    transparent 65%);
+
+            pointer-events: none;
+        }
+
+
+        .contact-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+
+            height: 220px;
+
+            right: 5%;
+
+            bottom: -90px;
+
+            border-radius: 50%;
+
+            background:
+
+                radial-gradient(circle,
+                    rgba(245, 160, 60, .16),
+                    transparent 70%);
+
+            filter: blur(5px);
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
+            z-index: 2;
+        }
+
+
+        .contact-hero h1 {
+
+            font-size: clamp(36px, 5.5vw, 58px);
+
+            margin-top: 22px;
+
+            color: var(--text);
+        }
+
+
+        .contact-hero p {
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+            max-width: 650px;
+
+            margin: 20px auto 0;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: clamp(30px, 4vw, 42px);
+
+            margin-top: 10px;
+        }
+
+
+        .section-heading p {
+
+            color: var(--muted);
+
+            max-width: 600px;
+
+            margin: 12px auto 0;
+        }
+
+
+        /* =====================================================
+           CONTACT INFO CARDS
+        ===================================================== */
+
+        .info-card {
+
+            height: 100%;
+
+            padding: 40px 28px;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, .98),
+                    rgba(248, 245, 255, .85));
+
+            border-radius: 24px;
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            box-shadow:
+
+                0 12px 35px rgba(66, 44, 105, .06);
+        }
+
+
+        .info-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 170px;
+
+            height: 170px;
+
+            border-radius: 50%;
+
+            top: -100px;
+
+            right: -80px;
+
+            background:
+
+                radial-gradient(circle,
+                    rgba(220, 85, 165, .14),
+                    transparent 70%);
+        }
+
+
+        .info-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100px;
+
+            height: 100px;
+
+            border-radius: 50%;
+
+            bottom: -65px;
+
+            left: -50px;
+
+            background:
+
+                radial-gradient(circle,
+                    rgba(118, 85, 232, .10),
+                    transparent 70%);
+        }
+
+
+        .info-card:hover {
+
+            transform: translateY(-9px);
+
+            border-color: rgba(118, 85, 232, .25);
+
+            box-shadow:
+
+                0 22px 50px rgba(79, 55, 120, .12);
+        }
+
+
+        .info-icon {
+
+            width: 68px;
+
+            height: 68px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 20px;
+
+            font-size: 25px;
+
+            color: #fff;
+
+            transition: .35s;
+        }
+
+
+        .info-card:hover .info-icon {
+
+            transform: scale(1.1) rotate(6deg);
+        }
+
+
+        .info-icon.phone {
+
+            background:
+
+                linear-gradient(135deg,
+                    #7655e8,
+                    #9277f0);
+
+            box-shadow:
+
+                0 12px 28px rgba(118, 85, 232, .22);
+        }
+
+
+        .info-icon.whatsapp {
+
+            background:
+
+                linear-gradient(135deg,
+                    #25b866,
+                    #48d58a);
+
+            box-shadow:
+
+                0 12px 28px rgba(37, 184, 102, .18);
+        }
+
+
+        .info-icon.email {
+
+            background:
+
+                linear-gradient(135deg,
+                    #f5a03c,
+                    #dc55a5);
+
+            box-shadow:
+
+                0 12px 28px rgba(220, 85, 165, .20);
+        }
+
+
+        .info-card h4 {
+
+            font-size: 21px;
+
+            color: var(--text);
+        }
+
+
+        .info-card p {
+
+            color: var(--muted);
+
+            margin-bottom: 10px;
+        }
+
+
+        .info-card a {
+
+            color: var(--purple);
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .info-card a:hover {
+
+            color: var(--pink);
+        }
+
+
+        /* =====================================================
+           LOCATIONS
+        ===================================================== */
+
+        .locations-section {
+
+            background:
+
+                radial-gradient(circle at 5% 50%,
+                    rgba(118, 85, 232, .08),
+                    transparent 30%),
+
+                radial-gradient(circle at 95% 70%,
+                    rgba(245, 160, 60, .08),
+                    transparent 30%),
+
+                #f9f6ff;
+
+            border-top: 1px solid rgba(118, 85, 232, .08);
+
+            border-bottom: 1px solid rgba(118, 85, 232, .08);
+        }
+
+
+        .branch-card {
+
+            height: 100%;
+
+            display: flex;
+
+            gap: 22px;
+
+            padding: 32px;
+
+            background: #fff;
+
+            border-radius: 24px;
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            box-shadow:
+
+                0 12px 35px rgba(65, 44, 100, .06);
+        }
+
+
+        .branch-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 4px;
+
+            background:
+
+                linear-gradient(180deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange));
+        }
+
+
+        .branch-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(118, 85, 232, .25);
+
+            box-shadow:
+
+                0 22px 45px rgba(70, 48, 110, .11);
+        }
+
+
+        .branch-icon {
+
+            flex-shrink: 0;
+
+            width: 64px;
+
+            height: 64px;
+
+            border-radius: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #fff;
+
+            font-size: 24px;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+
+            box-shadow:
+
+                0 12px 28px rgba(118, 85, 232, .20);
+
+            transition: .35s;
+        }
+
+
+        .branch-card:hover .branch-icon {
+
+            transform: rotate(-6deg) scale(1.06);
+        }
+
+
+        .location-label {
+
+            font-size: 11px;
+
+            color: var(--orange);
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .branch-content h3 {
+
+            margin: 5px 0 8px;
+
+            font-size: 22px;
+        }
+
+
+        .branch-content p {
+
+            color: var(--muted);
+        }
+
+
+        .branch-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 6px;
+        }
+
+
+        .location-btn,
+        .call-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 9px 16px;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .location-btn {
+
+            color: var(--purple);
+
+            background: rgba(118, 85, 232, .09);
+        }
+
+
+        .location-btn:hover {
+
+            color: #fff;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+        }
+
+
+        .call-btn {
+
+            color: var(--text);
+
+            background: #f5f2fc;
+        }
+
+
+        .call-btn:hover {
+
+            color: #fff;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--orange),
+                    var(--pink));
+        }
+
+
+        /* =====================================================
+           CENTERS
+        ===================================================== */
+
+        .center-card {
+
+            position: relative;
+
+            height: 100%;
+
+            text-align: center;
+
+            padding: 36px 24px;
+
+            border-radius: 24px;
+
+            background:
+
+                linear-gradient(145deg,
+                    #ffffff,
+                    #faf7ff);
+
+            border: 1px solid rgba(118, 85, 232, .11);
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            box-shadow:
+
+                0 10px 32px rgba(65, 44, 100, .055);
+        }
+
+
+        .center-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 130px;
+
+            height: 130px;
+
+            border-radius: 50%;
+
+            left: -65px;
+
+            bottom: -65px;
+
+            background:
+
+                radial-gradient(circle,
+                    rgba(245, 160, 60, .13),
+                    transparent 70%);
+        }
+
+
+        .center-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(118, 85, 232, .25);
+
+            box-shadow:
+
+                0 20px 45px rgba(65, 44, 100, .11);
+        }
+
+
+        .center-number {
+
+            position: absolute;
+
+            top: 16px;
+
+            right: 20px;
+
+            color: #bbb5cb;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .center-icon {
+
+            width: 62px;
+
+            height: 62px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+
+                linear-gradient(135deg,
+                    rgba(245, 160, 60, .15),
+                    rgba(220, 85, 165, .10));
+
+            color: var(--orange);
+
+            font-size: 22px;
+
+            transition: .35s;
+        }
+
+
+        .center-card:nth-child(3n+2) .center-icon {
+
+            background:
+
+                linear-gradient(135deg,
+                    rgba(118, 85, 232, .13),
+                    rgba(220, 85, 165, .10));
+
+            color: var(--purple);
+        }
+
+
+        .center-card:nth-child(3n) .center-icon {
+
+            background:
+
+                linear-gradient(135deg,
+                    rgba(54, 191, 162, .13),
+                    rgba(118, 85, 232, .09));
+
+            color: var(--mint);
+        }
+
+
+        .center-card:hover .center-icon {
+
+            transform: scale(1.1) rotate(6deg);
+        }
+
+
+        .center-card h4 {
+
+            margin-top: 18px;
+
+            font-size: 20px;
+        }
+
+
+        .center-card p {
+
+            color: var(--muted);
+        }
+
+
+        .center-card a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--purple);
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+
+        .center-card a:hover {
+
+            color: var(--pink);
+
+            gap: 12px;
+        }
+
+
+        /* =====================================================
+           ENQUIRY
+        ===================================================== */
+
+        .enquiry-section {
+
+            background:
+
+                radial-gradient(circle at 90% 20%,
+                    rgba(220, 85, 165, .07),
+                    transparent 30%),
+
+                radial-gradient(circle at 10% 80%,
+                    rgba(118, 85, 232, .06),
+                    transparent 30%),
+
+                #f9f7ff;
+
+            border-top: 1px solid rgba(118, 85, 232, .08);
+
+            border-bottom: 1px solid rgba(118, 85, 232, .08);
+        }
+
+
+        .form-card {
+
+            height: 100%;
+
+            background: #fff;
+
+            padding: 44px;
+
+            border-radius: 26px;
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            box-shadow:
+
+                0 20px 60px rgba(65, 44, 100, .08);
+        }
+
+
+        .form-label-top {
+
+            color: var(--purple);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        .form-card h2 {
+
+            margin-top: 10px;
+
+            font-size: clamp(26px, 3.5vw, 36px);
+        }
+
+
+        .form-intro {
+
+            color: var(--muted);
+
+            margin-bottom: 28px;
+        }
+
+
+        .form-card label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-weight: 600;
+
+            font-size: 14.5px;
+
+            color: var(--text);
+        }
+
+
+        .form-control,
+        .form-select {
+
+            min-height: 50px;
+
+            background: #faf8ff;
+
+            border: 1px solid rgba(118, 85, 232, .13);
+
+            color: var(--text);
+
+            border-radius: 12px;
+
+            padding: 12px 15px;
+
+            transition: .3s;
+        }
+
+
+        .form-control:hover,
+        .form-select:hover {
+
+            border-color: rgba(118, 85, 232, .30);
+
+            background: #fff;
+        }
+
+
+        .form-control::placeholder {
+
+            color: #aaa4ba;
+        }
+
+
+        .form-control:focus,
+        .form-select:focus {
+
+            background: #fff;
+
+            color: var(--text);
+
+            border-color: var(--purple);
+
+            box-shadow:
+
+                0 0 0 4px rgba(118, 85, 232, .10);
+        }
+
+
+        .form-select option {
+
+            background: #fff;
+
+            color: var(--text);
+        }
+
+
+        textarea.form-control {
+
+            min-height: 130px;
+
+            resize: none;
+        }
+
+
+        .submit-btn {
+
+            border: none;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+
+            color: #fff;
+
+            font-weight: 700;
+
+            box-shadow:
+
+                0 12px 28px rgba(118, 85, 232, .20);
+
+            transition: .35s;
+        }
+
+
+        .submit-btn:hover {
+
+            color: #fff;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+
+                0 18px 38px rgba(220, 85, 165, .22);
+        }
+
+
+        /* =====================================================
+           MAP
+        ===================================================== */
+
+        .map-card {
+
+            background: #fff;
+
+            padding: 20px;
+
+            border-radius: 26px;
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            box-shadow:
+
+                0 15px 45px rgba(65, 44, 100, .07);
+        }
+
+
+        .map-title {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 4px 4px 16px;
+        }
+
+
+        .map-title span {
+
+            color: var(--purple);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .map-title h3 {
+
+            margin: 3px 0 0;
+
+            font-size: 21px;
+        }
+
+
+        .map-title>i {
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            color: var(--purple);
+
+            background: rgba(118, 85, 232, .09);
+
+            font-size: 20px;
+        }
+
+
+        .map-container {
+
+            height: 340px;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+        }
+
+
+        .map-container iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: 0;
+        }
+
+
+        .map-info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 16px 4px 2px;
+        }
+
+
+        .map-info-icon {
+
+            width: 46px;
+
+            height: 46px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(245, 160, 60, .12);
+
+            color: var(--orange);
+        }
+
+
+        .map-info h5 {
+
+            margin: 0;
+
+            font-size: 15.5px;
+        }
+
+
+        .map-info p {
+
+            margin: 3px 0 0;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           HOURS
+        ===================================================== */
+
+        .hours-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            margin-top: 18px;
+
+            padding: 22px;
+
+            background: #fff;
+
+            border-radius: 22px;
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            box-shadow:
+
+                0 12px 35px rgba(65, 44, 100, .06);
+        }
+
+
+        .hours-icon {
+
+            width: 54px;
+
+            height: 54px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: var(--mint);
+
+            background: rgba(54, 191, 162, .11);
+
+            font-size: 21px;
+        }
+
+
+        .hours-card h5 {
+
+            margin: 0 0 7px;
+        }
+
+
+        .hours-card p {
+
+            margin: 3px 0;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .hours-card strong {
+
+            color: var(--text);
+
+            margin-left: 5px;
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .final-cta {
+
+            margin: 0 24px;
+
+            border-radius: 32px;
+
+            background:
+
+                linear-gradient(120deg,
+                    #f1ebff,
+                    #fff0f7,
+                    #fff5e9);
+
+            border: 1px solid rgba(118, 85, 232, .12);
+
+            padding: 52px 44px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+
+                0 18px 50px rgba(80, 50, 120, .07);
+        }
+
+
+        .final-cta::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(circle at 10% 30%,
+                    rgba(118, 85, 232, .12),
+                    transparent 40%),
+
+                radial-gradient(circle at 50% 100%,
+                    rgba(220, 85, 165, .10),
+                    transparent 45%),
+
+                radial-gradient(circle at 90% 70%,
+                    rgba(245, 160, 60, .14),
+                    transparent 40%);
+        }
+
+
+        .final-cta::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 170px;
+
+            height: 170px;
+
+            border: 1px solid rgba(118, 85, 232, .13);
+
+            border-radius: 50%;
+
+            right: 8%;
+
+            top: -85px;
+        }
+
+
+        .final-cta>* {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .final-cta h2 {
+
+            font-size: clamp(24px, 3.5vw, 34px);
+
+            margin: 0;
+
+            color: var(--text);
+        }
+
+
+        .final-cta p {
+
+            margin: 8px 0 0;
+
+            color: var(--muted);
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            background:
+
+                linear-gradient(90deg,
+                    var(--purple),
+                    var(--pink));
+
+            color: #fff;
+
+            font-weight: 800;
+
+            transition: .35s;
+
+            box-shadow:
+
+                0 12px 30px rgba(118, 85, 232, .20);
+        }
+
+
+        .cta-button:hover {
+
+            color: #fff;
+
+            transform: translateY(-4px);
+
+            box-shadow:
+
+                0 18px 35px rgba(220, 85, 165, .22);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding: 60px 0 20px;
+
+            color: var(--text-dim);
+
+            background:
+
+                linear-gradient(180deg,
+                    #fbf9ff,
+                    #f4efff);
+
+            border-top: 1px solid rgba(118, 85, 232, .12);
+        }
+
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .footer-brand img {
+
+            width: 65px;
+
+            height: 65px;
+
+            object-fit: contain;
+
+            filter:
+
+                drop-shadow(0 5px 12px rgba(118, 85, 232, .18));
+        }
+
+
+        .footer-brand h3 {
+
+            margin: 0;
+
+            color: var(--text);
+
+            font-size: 26px;
+
+            font-weight: 800;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        .footer-brand span {
+
+            color: var(--purple);
+
+            font-weight: 700;
+
+            font-size: 13px;
+        }
+
+
+        .footer-description {
+
+            max-width: 440px;
+
+            margin-top: 20px;
+
+            color: var(--text-dim);
+
+            line-height: 1.8;
+        }
+
+
+        footer h5 {
+
+            color: var(--text);
+
+            margin-bottom: 20px;
+
+            font-weight: 700;
+
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+
+        footer .col-lg-3 a {
+
+            display: block;
+
+            color: var(--text-dim);
+
+            margin-bottom: 11px;
+
+            transition: .3s;
+        }
+
+
+        footer .col-lg-3 a:hover {
+
+            color: var(--purple);
+
+            transform: translateX(5px);
+        }
+
+
+        footer .col-lg-4 p {
+
+            color: var(--text-dim);
+
+            margin-bottom: 9px;
+        }
+
+
+        footer .col-lg-4 p i {
+
+            width: 20px;
+
+            color: var(--purple);
+        }
+
+
+        footer hr {
+
+            margin-top: 45px;
+
+            border-color: rgba(118, 85, 232, .12);
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .footer-bottom p {
+
+            margin: 0;
+
+            color: #858097;
+
+            font-size: 13px;
+        }
+
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        .social-icons a {
+
+            width: 40px;
+
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: var(--purple);
+
+            background: #fff;
+
+            border: 1px solid rgba(118, 85, 232, .15);
+
+            transition: .3s;
+        }
+
+
+        .social-icons a:hover {
+
+            color: #fff;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+
+            transform: translateY(-5px);
+        }
+
+
+        /* =====================================================
+           SUCCESS MODAL
+        ===================================================== */
+
+        .modal-content {
+
+            background: #fff;
+
+            border: 1px solid rgba(118, 85, 232, .13);
+        }
+
+
+        .success-modal {
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            border: none;
+
+            border-radius: 25px;
+        }
+
+
+        .success-icon {
+
+            width: 75px;
+
+            height: 75px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(37, 184, 102, .11);
+
+            color: #25b866;
+
+            font-size: 32px;
+        }
+
+
+        .success-modal h3 {
+
+            margin-top: 20px;
+        }
+
+
+        .success-modal p {
+
+            color: var(--muted);
+        }
+
+
+        .success-modal .btn-primary {
+
+            border: none;
+
+            background:
+
+                linear-gradient(135deg,
+                    var(--purple),
+                    var(--pink));
+        }
+
+
+        /* =====================================================
+           SCROLLBAR
+        ===================================================== */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background: #f3effb;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background:
+
+                linear-gradient(180deg,
+                    var(--purple),
+                    var(--pink),
+                    var(--orange));
+
+            border-radius: 20px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .navbar {
+
+                min-height: auto;
+            }
+
+
+            .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px;
+
+                background: #fff;
+
+                border: 1px solid rgba(118, 85, 232, .13);
+
+                border-radius: 18px;
+
+                box-shadow:
+
+                    0 15px 35px rgba(65, 44, 100, .08);
+            }
+
+
+            .navbar-nav {
+
+                gap: 2px;
+            }
+
+
+            .navbar-nav .nav-link {
+
+                padding: 12px 15px !important;
+            }
+
+
+            .navbar-nav .nav-link::after {
+
+                display: none;
+            }
+
+
+            .navbar .btn-glow {
+
+                display: inline-flex;
+
+                margin-top: 10px;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .logo-img {
+
+                width: 58px;
+
+                height: 58px;
+            }
+
+
+            .navbar-brand h3 {
+
+                font-size: 23px;
+            }
+
+
+            .navbar-brand small {
+
+                font-size: 12px;
+            }
+
+
+            .contact-hero {
+
+                padding: 75px 0 45px;
+            }
+
+
+            section {
+
+                padding: 70px 0;
+            }
+
+
+            .branch-card {
+
+                padding: 26px;
+
+                flex-direction: column;
+
+                text-align: center;
+
+                align-items: center;
+            }
+
+
+            .branch-buttons {
+
+                justify-content: center;
+            }
+
+
+            .form-card {
+
+                padding: 28px 20px;
+            }
+
+
+            .map-container {
+
+                height: 280px;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .final-cta {
+
+                text-align: center;
+
+                margin: 0 12px;
+
+                padding: 40px 24px;
+            }
+
+
+            .final-cta .col-lg-4 {
+
+                margin-top: 22px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container-fluid px-3">
+
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="images/logo.png" class="logo-img" alt="Kiran Midbrain Academy">
+
+
+                <div class="ms-2">
+
+                    <h3 class="m-0 fw-bold">
+                        KIRAN
+                    </h3>
+
+                    <small class="fw-bold">
+                        MIDBRAIN ACADEMY
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">
+                            Programs
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="center.html">
+                            Center
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Parents review.html">
+                            Reviews
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a href="#enquiry" class="btn btn-glow rounded-pill px-4">
+
+                            Enquire Now
+
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="contact-hero">
+
+        <div class="container hero-content">
+
+            <span class="eyebrow" style="justify-content:center;">
+
+                GET IN TOUCH
+
+            </span>
+
+
+            <h1>
+
+                Let's unlock your child's
+
+                <span class="split">
+                    potential
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Have questions about our programs?
+
+                We're here to help you choose the right
+                learning experience for your child.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT INFO
+    ===================================================== -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- PHONE -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="info-card">
+
+                        <div class="info-icon phone">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Call Us
+                        </h4>
+
+
+                        <p>
+                            Talk directly with our academy team.
+                        </p>
+
+
+                        <a href="tel:+911234567890">
+
+                            +91 12345 67890
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="info-card">
+
+                        <div class="info-icon whatsapp">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </div>
+
+
+                        <h4>
+                            WhatsApp
+                        </h4>
+
+
+                        <p>
+                            Send us your enquiry on WhatsApp.
+                        </p>
+
+
+                        <a href="https://wa.me/911234567890" target="_blank" rel="noopener">
+
+                            Chat With Us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="col-lg-4 col-md-6 mx-md-auto">
+
+                    <div class="info-card">
+
+                        <div class="info-icon email">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Email Us
+                        </h4>
+
+
+                        <p>
+                            Send us your questions anytime.
+                        </p>
+
+
+                        <a href="mailto:info@kiranmidbrain.com">
+
+                            info@kiranmidbrain.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BRANCHES
+    ===================================================== -->
+
+    <section class="locations-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="eyebrow" style="justify-content:center;">
+
+                    OUR LOCATIONS
+
+                </span>
+
+
+                <h2>
+
+                    Our
+
+                    <span class="split">
+                        Branches
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Visit our branches in Nagpur and
+                    experience our learning environment.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- DIGHORI -->
+
+                <div class="col-lg-6">
+
+                    <div class="branch-card">
+
+
+                        <div class="branch-icon">
+
+                            <i class="fa-solid fa-building"></i>
+
+                        </div>
+
+
+                        <div class="branch-content">
+
+                            <span class="location-label">
+                                MAIN BRANCH
+                            </span>
+
+
+                            <h3>
+                                Nagpur – Dighori
+                            </h3>
+
+
+                            <p>
+
+                                Kiran Midbrain Academy<br>
+
+                                Dighori, Nagpur, Maharashtra
+
+                            </p>
+
+
+                            <div class="branch-buttons">
+
+
+                                <a href="https://www.google.com/maps/search/?api=1&query=Dighori%20Nagpur"
+                                    target="_blank" rel="noopener" class="location-btn">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    View Location
+
+                                </a>
+
+
+                                <a href="tel:+911234567890" class="call-btn">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    Call
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BESA -->
+
+                <div class="col-lg-6">
+
+                    <div class="branch-card">
+
+
+                        <div class="branch-icon">
+
+                            <i class="fa-solid fa-building"></i>
+
+                        </div>
+
+
+                        <div class="branch-content">
+
+                            <span class="location-label">
+                                BRANCH
+                            </span>
+
+
+                            <h3>
+                                Nagpur – Besa
+                            </h3>
+
+
+                            <p>
+
+                                Kiran Midbrain Academy<br>
+
+                                Besa, Nagpur, Maharashtra
+
+                            </p>
+
+
+                            <div class="branch-buttons">
+
+
+                                <a href="https://www.google.com/maps/search/?api=1&query=Besa%20Nagpur" target="_blank"
+                                    rel="noopener" class="location-btn">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    View Location
+
+                                </a>
+
+
+                                <a href="tel:+911234567890" class="call-btn">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    Call
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CENTERS
+    ===================================================== -->
+
+    <section>
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <span class="eyebrow" style="justify-content:center;">
+
+                    OUR CENTERS
+
+                </span>
+
+
+                <h2>
+
+                    Find Us
+
+                    <span class="split">
+                        Near You
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Our centers are available across
+                    Nagpur and nearby cities.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- 01 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            01
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Nagpur
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Nagpur%20Maharashtra" target="_blank"
+                            rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 02 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            02
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Warora
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Warora%20Maharashtra" target="_blank"
+                            rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 03 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            03
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Chandrapur
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Chandrapur%20Maharashtra"
+                            target="_blank" rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 04 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            04
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Chimur
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Chimur%20Maharashtra" target="_blank"
+                            rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 05 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            05
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Ghughu
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Ghughu%20Maharashtra" target="_blank"
+                            rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 06 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="center-card">
+
+                        <span class="center-number">
+                            06
+                        </span>
+
+
+                        <div class="center-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <h4>
+                            Umred
+                        </h4>
+
+
+                        <p>
+                            Maharashtra
+                        </p>
+
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Umred%20Maharashtra" target="_blank"
+                            rel="noopener">
+
+                            View Location
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ENQUIRY + MAP
+    ===================================================== -->
+
+    <section class="enquiry-section" id="enquiry">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <!-- FORM -->
+
+                <div class="col-lg-7">
+
+                    <div class="form-card">
+
+
+                        <span class="form-label-top">
+                            SEND AN ENQUIRY
+                        </span>
+
+
+                        <h2>
+
+                            We'd love to
+
+                            <span class="split">
+                                hear from you
+                            </span>
+
+                        </h2>
+
+
+                        <p class="form-intro">
+
+                            Fill in your details and our team
+                            will contact you shortly.
+
+                        </p>
+
+
+                        <form id="contactForm">
+
+                            <div class="row g-3">
+
+
+                                <div class="col-md-6">
+
+                                    <label for="parentName">
+                                        Parent Name
+                                    </label>
+
+
+                                    <input type="text" class="form-control" id="parentName"
+                                        placeholder="Enter your name" required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="childName">
+                                        Child's Name
+                                    </label>
+
+
+                                    <input type="text" class="form-control" id="childName"
+                                        placeholder="Enter child's name" required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="phone">
+                                        Phone Number
+                                    </label>
+
+
+                                    <input type="tel" class="form-control" id="phone"
+                                        placeholder="10 digit mobile number" maxlength="10" required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="email">
+                                        Email Address
+                                    </label>
+
+
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="location">
+                                        Preferred Location
+                                    </label>
+
+
+                                    <select class="form-select" id="location" required>
+
+                                        <option value="">
+                                            Select Location
+                                        </option>
+
+
+                                        <optgroup label="Branches">
+
+                                            <option>
+                                                Nagpur – Besa
+                                            </option>
+
+                                            <option>
+                                                Nagpur – Dighori
+                                            </option>
+
+                                        </optgroup>
+
+
+                                        <optgroup label="Centers">
+
+                                            <option>
+                                                Nagpur
+                                            </option>
+
+                                            <option>
+                                                Warora
+                                            </option>
+
+                                            <option>
+                                                Chandrapur
+                                            </option>
+
+                                            <option>
+                                                Chimur
+                                            </option>
+
+                                            <option>
+                                                Ghughu
+                                            </option>
+
+                                            <option>
+                                                Umred
+                                            </option>
+
+                                        </optgroup>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="program">
+                                        Interested Program
+                                    </label>
+
+
+                                    <select class="form-select" id="program" required>
+
+                                        <option value="">
+                                            Select Program
+                                        </option>
+
+
+                                        <option>
+                                            Midbrain Activation
+                                        </option>
+
+                                        <option>
+                                            Memory Enhancement
+                                        </option>
+
+                                        <option>
+                                            Concentration Training
+                                        </option>
+
+                                        <option>
+                                            Creativity Development
+                                        </option>
+
+                                        <option>
+                                            Confidence Building
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <label for="message">
+                                        Message
+                                    </label>
+
+
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Write your enquiry..." required></textarea>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <button type="submit" class="submit-btn">
+
+                                        Send Enquiry
+
+                                        <i class="fa-solid fa-paper-plane ms-2"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MAP -->
+
+                <div class="col-lg-5">
+
+                    <div class="map-card">
+
+
+                        <div class="map-title">
+
+                            <div>
+
+                                <span>
+                                    FIND US
+                                </span>
+
+                                <h3>
+                                    Our Location
+                                </h3>
+
+                            </div>
+
+
+                            <i class="fa-solid fa-map-location-dot"></i>
+
+                        </div>
+
+
+                        <div class="map-container">
+
+                            <iframe src="https://www.google.com/maps?q=Nagpur,Maharashtra&output=embed" loading="lazy">
+                            </iframe>
+
+                        </div>
+
+
+                        <div class="map-info">
+
+
+                            <div class="map-info-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>
+                                    Kiran Midbrain Academy
+                                </h5>
+
+
+                                <p>
+                                    Nagpur, Maharashtra
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WORKING HOURS -->
+
+                    <div class="hours-card">
+
+
+                        <div class="hours-icon">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h5>
+                                Working Hours
+                            </h5>
+
+
+                            <p>
+
+                                Monday – Saturday
+
+                                <strong>
+                                    9:00 AM – 7:00 PM
+                                </strong>
+
+                            </p>
+
+
+                            <p class="mb-0">
+
+                                Sunday
+
+                                <strong>
+                                    Closed
+                                </strong>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ===================================================== -->
+
+    <section style="padding:0 0 110px;">
+
+
+        <div class="final-cta">
+
+
+            <div class="row align-items-center">
+
+
+                <div class="col-lg-8">
+
+                    <h2>
+                        Ready to unlock your child's potential?
+                    </h2>
+
+
+                    <p>
+                        Book a FREE demo session and discover
+                        your child's hidden potential.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4 text-lg-end">
+
+                    <a href="#enquiry" class="cta-button">
+
+                        Book Free Demo
+
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+
+            <div class="row g-5">
+
+
+                <!-- BRAND -->
+
+                <div class="col-lg-5">
+
+
+                    <div class="footer-brand">
+
+                        <img src="images/logo.png" alt="Kiran Midbrain Academy">
+
+
+                        <div>
+
+                            <h3>
+                                KIRAN
+                            </h3>
+
+
+                            <span>
+                                MIDBRAIN ACADEMY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="footer-description">
+
+                        Unlock the hidden potential of every child
+                        through specialized training programs
+                        designed to improve focus, memory,
+                        creativity and confidence.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+
+                    <a href="program.html">
+                        Programs
+                    </a>
+
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- LOCATIONS -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Our Locations
+                    </h5>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Besa
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Nagpur – Dighori
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Warora
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chandrapur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Chimur
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Ghughu & Umred
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="footer-bottom">
+
+
+                <p>
+
+                    © 2026 Kiran Midbrain Academy.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <div class="social-icons">
+
+
+                    <a href="#" aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#" aria-label="YouTube">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+
+                    <a href="https://wa.me/911234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         SUCCESS MODAL
+    ===================================================== -->
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+
+
+        <div class="modal-dialog modal-dialog-centered">
+
+
+            <div class="modal-content success-modal">
+
+
+                <div class="success-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <h3>
+                    Enquiry Submitted!
+                </h3>
+
+
+                <p>
+
+                    Thank you for contacting Kiran Midbrain Academy.
+                    Our team will contact you shortly.
+
+                </p>
+
+
+                <button type="button" class="btn btn-primary rounded-pill px-4" data-bs-dismiss="modal">
+
+                    Okay
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Contact JS -->
+
+    <script src="js/contact.js"></script>
+
+
+</body>
+
+</html>
